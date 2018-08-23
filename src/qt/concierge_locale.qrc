@@ -1,0 +1,17 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="ca">locale/concierge_ca.qm</file>
+        <file alias="da">locale/concierge_da.qm</file>
+        <file alias="de">locale/concierge_de.qm</file>
+        <file alias="en">locale/concierge_en.qm</file>
+        <file alias="en_US">locale/concierge_en_US.qm</file>
+        <file alias="es">locale/concierge_es.qm</file>
+        <file alias="fr_FR">locale/concierge_fr_FR.qm</file>
+        <file alias="it">locale/concierge_it.qm</file>
+        <file alias="ja">locale/concierge_ja.qm</file>
+        <file alias="pt">locale/concierge_pt.qm</file>
+        <file alias="ro_RO">locale/concierge_ro_RO.qm</file>
+        <file alias="ru">locale/concierge_ru.qm</file>
+        <file alias="zh_TW">locale/concierge_zh_TW.qm</file>
+    </qresource>
+</RCC>

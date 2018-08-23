@@ -1,0 +1,11 @@
+[Protocol]
+exec=concierge-qt '%u'
+protocol=concierge
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

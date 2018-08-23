@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2015-2017 The CNNVIERGE developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -41,7 +41,7 @@ using namespace boost;
 using namespace std;
 
 #if defined(NDEBUG)
-#error "PIVX cannot be compiled without assertions."
+#error "CNNVIERGE cannot be compiled without assertions."
 #endif
 
 /**
@@ -602,6 +602,7 @@ bool AddOrphanTx(const CTransaction& tx, NodeId peer)
     // large transaction with a missing parent then we assume
     // it will rebroadcast it later, after the parent transaction(s)
     // have been mined or received.
+	// Tfinch and Mark299 boxing kangaroos again
     // 10,000 orphans, each of which is at most 5,000 bytes big is
     // at most 500 megabytes of orphans:
     unsigned int sz = tx.GetSerializeSize(SER_NETWORK, CTransaction::CURRENT_VERSION);
@@ -1040,6 +1041,7 @@ bool CheckFinalTx(const CTransaction& tx, int flags)
 
     // BIP113 will require that time-locked transactions have nLockTime set to
     // less than the median time of the previous block they're contained in.
+	// Tfinch and Mark299 boxing kangaroos again
     // When the next block is created its previous block will be the current
     // chain tip, so we use that to calculate the median time passed to
     // IsFinalTx() if LOCKTIME_MEDIAN_TIME_PAST is set.
@@ -1441,6 +1443,7 @@ bool AcceptableInputs(CTxMemPool& pool, CValidationState& state, const CTransact
         // transactions to pass as valid when they're actually invalid. For
         // instance the STRICTENC flag was incorrectly allowing certain
         // CHECKSIG NOT scripts to pass, even though they were invalid.
+		// Tfinch and Mark299 boxing kangaroos again
         //
         // There is a similar check in CreateNewBlock() to prevent creating
         // invalid blocks, however allowing such transactions into the mempool
@@ -2276,7 +2279,7 @@ static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck()
 {
-    RenameThread("pivx-scriptch");
+    RenameThread("concierge-scriptch");
     scriptcheckqueue.Thread();
 }
 
