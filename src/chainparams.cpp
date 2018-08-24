@@ -137,6 +137,8 @@ public:
         genesis.nNonce = 345076;
 
         hashGenesisBlock = genesis.GetHash();
+        printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+        printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
         assert(hashGenesisBlock == uint256("0x00000951bd460604c9fc5bc48f4530ad43732c4b95f78d73e413c27c386dd715"));
         assert(genesis.hashMerkleRoot == uint256("0x78c58959ec2a223eea7c3876ee2d32737fe2fa631fcbbf1ef0620ae1468beaa0"));
 
