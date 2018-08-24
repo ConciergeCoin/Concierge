@@ -53,7 +53,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-(0,uint256("0x00000951bd460604c9fc5bc48f4530ad43732c4b95f78d73e413c27c386dd715"));
+(0,uint256("0x973e6529c057b012ad340a1e0fc9363ead3d8f2d8de96dbbb581604097376902"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -139,8 +139,8 @@ public:
         hashGenesisBlock = genesis.GetHash();
         printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
         printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
-        assert(hashGenesisBlock == uint256("0x00000951bd460604c9fc5bc48f4530ad43732c4b95f78d73e413c27c386dd715"));
-        assert(genesis.hashMerkleRoot == uint256("0x78c58959ec2a223eea7c3876ee2d32737fe2fa631fcbbf1ef0620ae1468beaa0"));
+        assert(hashGenesisBlock == uint256("0x973e6529c057b012ad340a1e0fc9363ead3d8f2d8de96dbbb581604097376902"));
+        assert(genesis.hashMerkleRoot == uint256("0xf955e6840fdf0c300eaa257793ddf06446ec2aa92bceac7d343c2b5b8b6f1b04"));
 
         //vSeeds.push_back(CDNSSeedData("178.254.23.111", "178.254.23.111"));           // Single node address
 
@@ -208,7 +208,7 @@ public:
         genesis.nNonce = 345076;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
+        assert(hashGenesisBlock == uint256("0x973e6529c057b012ad340a1e0fc9363ead3d8f2d8de96dbbb581604097376902"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -274,7 +274,7 @@ public:
 
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 51476;
-        assert(hashGenesisBlock == uint256("0x00000951bd460604c9fc5bc48f4530ad43732c4b95f78d73e413c27c386dd715"));
+        assert(hashGenesisBlock == uint256("0x973e6529c057b012ad340a1e0fc9363ead3d8f2d8de96dbbb581604097376902"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
