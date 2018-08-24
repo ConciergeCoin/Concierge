@@ -62,12 +62,12 @@
         <translation>Indirizzi di ricezione</translation>
     </message>
     <message>
-        <source>These are your CNNVIERGE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Questi sono gli indirizzi CNNVIERGE per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo di ricezione prima di inviare valuta.</translation>
+        <source>These are your CONVIERGE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Questi sono gli indirizzi CONVIERGE per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo di ricezione prima di inviare valuta.</translation>
     </message>
     <message>
-        <source>These are your CNNVIERGE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Questi sono gli indirizzi CNNVIERGE per la ricezione di pagamenti. Si raccomanda di utilizzare un indirizzo diverso per ogni transazione.</translation>
+        <source>These are your CONVIERGE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Questi sono gli indirizzi CONVIERGE per la ricezione di pagamenti. Si raccomanda di utilizzare un indirizzo diverso per ogni transazione.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Conferma cifratura portafoglio</translation>
     </message>
     <message>
-        <source>CNNVIERGE will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CCCs from being stolen by malware infecting your computer.</source>
-        <translation>CNNVIERGE verrà ora chiuso per completare il processo di cifratura. Ricorda che crittografare il tuo portafoglio non protegge completamente i tuoi CCC dal furto da parte di software malevoli che potrebbero infettare il tuo computer.</translation>
+        <source>CONVIERGE will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CCCs from being stolen by malware infecting your computer.</source>
+        <translation>CONVIERGE verrà ora chiuso per completare il processo di cifratura. Ricorda che crittografare il tuo portafoglio non protegge completamente i tuoi CCC dal furto da parte di software malevoli che potrebbero infettare il tuo computer.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -247,8 +247,8 @@
         <translation>Indirizzo:</translation>
     </message>
     <message>
-        <source>The CNNVIERGE address to sign the message with</source>
-        <translation>L'indirizzo CNNVIERGE per firmare il messaggio con</translation>
+        <source>The CONVIERGE address to sign the message with</source>
+        <translation>L'indirizzo CONVIERGE per firmare il messaggio con</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -279,8 +279,8 @@
         <translation>Copiare la firma corrente negli Appunti di sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CNNVIERGE address</source>
-        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo CNNVIERGE</translation>
+        <source>Sign the message to prove you own this CONVIERGE address</source>
+        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo CONVIERGE</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -299,12 +299,12 @@
         <translation>Immettere la chiave privata codificata BIP 38. Inserire la passphrase nella casella centrale. Fare clic su Decripta Chiave per calcolare la chiave privata. Dopo che la chiave viene decrittata, cliccando su "Importa indirizzo" verrà aggiunta questa chiave privata al portafoglio.</translation>
     </message>
     <message>
-        <source>The CNNVIERGE address the message was signed with</source>
-        <translation>L'indirizzo CNNVIERGE con cui è stato firmato il messaggio</translation>
+        <source>The CONVIERGE address the message was signed with</source>
+        <translation>L'indirizzo CONVIERGE con cui è stato firmato il messaggio</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified CNNVIERGE address</source>
-        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo CNNVIERGE specificato </translation>
+        <source>Verify the message to ensure it was signed with the specified CONVIERGE address</source>
+        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo CONVIERGE specificato </translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -562,12 +562,12 @@
         <translation>Schede degli strumenti</translation>
     </message>
     <message>
-        <source>CNNVIERGE Core</source>
-        <translation>CNNVIERGE Core</translation>
+        <source>CONVIERGE Core</source>
+        <translation>CONVIERGE Core</translation>
     </message>
     <message>
-        <source>Send coins to a CNNVIERGE address</source>
-        <translation>Invia monete all' indirizzo CNNVIERGE</translation>
+        <source>Send coins to a CONVIERGE address</source>
+        <translation>Invia monete all' indirizzo CONVIERGE</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and concierge: URIs)</source>
@@ -582,20 +582,20 @@
         <translation>Esplora i masternodes</translation>
     </message>
     <message>
-        <source>Show information about CNNVIERGE Core</source>
-        <translation>Visualizza informazioni su CNNVIERGE Core</translation>
+        <source>Show information about CONVIERGE Core</source>
+        <translation>Visualizza informazioni su CONVIERGE Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for CNNVIERGE</source>
-        <translation>Modifica le opzioni di configurazione per CNNVIERGE</translation>
+        <source>Modify configuration options for CONVIERGE</source>
+        <translation>Modifica le opzioni di configurazione per CONVIERGE</translation>
     </message>
     <message>
-        <source>Sign messages with your CNNVIERGE addresses to prove you own them</source>
-        <translation>Firma i messaggi con i tuoi indirizzi CNNVIERGE per dimostrare di essere il proprietario </translation>
+        <source>Sign messages with your CONVIERGE addresses to prove you own them</source>
+        <translation>Firma i messaggi con i tuoi indirizzi CONVIERGE per dimostrare di essere il proprietario </translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified CNNVIERGE addresses</source>
-        <translation>Verifica i messaggi per assicurarsi che siano stati firmati con indirizzi CNNVIERGE specifici</translation>
+        <source>Verify messages to ensure they were signed with specified CONVIERGE addresses</source>
+        <translation>Verifica i messaggi per assicurarsi che siano stati firmati con indirizzi CONVIERGE specifici</translation>
     </message>
     <message>
         <source>Encrypt and decrypt private keys using a passphrase</source>
@@ -606,16 +606,16 @@
         <translation>Impostazioni MultiSend</translation>
     </message>
     <message>
-        <source>Open a CNNVIERGE: URI or payment request</source>
-        <translation>Apri un CNNVIERGE: URI o richiesta di pagamento</translation>
+        <source>Open a CONVIERGE: URI or payment request</source>
+        <translation>Apri un CONVIERGE: URI o richiesta di pagamento</translation>
     </message>
     <message>
         <source>Block explorer window</source>
         <translation>Finestra Block Explorer</translation>
     </message>
     <message>
-        <source>Show the CNNVIERGE Core help message to get a list with possible CNNVIERGE command-line options</source>
-        <translation>Mostra il messaggio di aiuto CNNVIERGE Core per ottenere un elenco con le possibili opzioni di riga di comando CNNVIERGE</translation>
+        <source>Show the CONVIERGE Core help message to get a list with possible CONVIERGE command-line options</source>
+        <translation>Mostra il messaggio di aiuto CONVIERGE Core per ottenere un elenco con le possibili opzioni di riga di comando CONVIERGE</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -716,15 +716,15 @@ MultiSend: %1</translation>
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>CNNVIERGE Core</source>
-        <translation>CNNVIERGE Core</translation>
+        <source>CONVIERGE Core</source>
+        <translation>CONVIERGE Core</translation>
     </message>
     </context>
 <context>
     <name>Intro</name>
     <message>
-        <source>CNNVIERGE Core</source>
-        <translation>CNNVIERGE Core</translation>
+        <source>CONVIERGE Core</source>
+        <translation>CONVIERGE Core</translation>
     </message>
     <message>
         <source>Error</source>
@@ -849,8 +849,8 @@ MultiSend: %1</translation>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The CNNVIERGE address to sign the message with</source>
-        <translation>L'indirizzo CNNVIERGE per firmare il messaggio con</translation>
+        <source>The CONVIERGE address to sign the message with</source>
+        <translation>L'indirizzo CONVIERGE per firmare il messaggio con</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -873,16 +873,16 @@ MultiSend: %1</translation>
         <translation>Copiare la firma corrente negli Appunti di sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CNNVIERGE address</source>
-        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo CNNVIERGE</translation>
+        <source>Sign the message to prove you own this CONVIERGE address</source>
+        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo CONVIERGE</translation>
     </message>
     <message>
-        <source>The CNNVIERGE address the message was signed with</source>
-        <translation>L'indirizzo CNNVIERGE con cui è stato firmato il messaggio</translation>
+        <source>The CONVIERGE address the message was signed with</source>
+        <translation>L'indirizzo CONVIERGE con cui è stato firmato il messaggio</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified CNNVIERGE address</source>
-        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo specificato CNNVIERGE</translation>
+        <source>Verify the message to ensure it was signed with the specified CONVIERGE address</source>
+        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo specificato CONVIERGE</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -920,8 +920,8 @@ MultiSend: %1</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>CNNVIERGE Core</source>
-        <translation>CNNVIERGE Core</translation>
+        <source>CONVIERGE Core</source>
+        <translation>CONVIERGE Core</translation>
     </message>
     </context>
 <context>

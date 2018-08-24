@@ -16,7 +16,7 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "CNNVIERGE"
+            VALUE "CompanyName",        "CONVIERGE"
             VALUE "FileDescription",    "concierged (OSS daemon/client for Concierge)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "concierged"

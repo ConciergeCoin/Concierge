@@ -58,12 +58,12 @@
         <translation>Отправка адресов</translation>
     </message>
     <message>
-        <source>These are your CNNVIERGE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Это ваши CNNVIERGE-адреса для отправки платежей. Перед отправкой монет всегда проверяйте сумму и адрес получателя.</translation>
+        <source>These are your CONVIERGE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Это ваши CONVIERGE-адреса для отправки платежей. Перед отправкой монет всегда проверяйте сумму и адрес получателя.</translation>
     </message>
     <message>
-        <source>These are your CNNVIERGE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Это ваши CNNVIERGE-адреса для получения платежей. Для каждой транзакции рекомендуется использовать новый адрес получения.</translation>
+        <source>These are your CONVIERGE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Это ваши CONVIERGE-адреса для получения платежей. Для каждой транзакции рекомендуется использовать новый адрес получения.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -160,8 +160,8 @@
         <translation>Подтверждение шифрования кошелька</translation>
     </message>
     <message>
-        <source>CNNVIERGE will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CCCs from being stolen by malware infecting your computer.</source>
-        <translation>CNNVIERGE сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши CNNVIERGE от кражи с использованием вредоносного ПО.</translation>
+        <source>CONVIERGE will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CCCs from being stolen by malware infecting your computer.</source>
+        <translation>CONVIERGE сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши CONVIERGE от кражи с использованием вредоносного ПО.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -223,8 +223,8 @@
         <translation>Адрес:</translation>
     </message>
     <message>
-        <source>The CNNVIERGE address to sign the message with</source>
-        <translation>Адрес CNNVIERGE для подписи сообщения с помощью</translation>
+        <source>The CONVIERGE address to sign the message with</source>
+        <translation>Адрес CONVIERGE для подписи сообщения с помощью</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -255,8 +255,8 @@
         <translation>Копировать текущую подпись в системный буфер обмена</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CNNVIERGE address</source>
-        <translation>Подпишите сообщение, чтобы подтвердить свой адрес CNNVIERGE</translation>
+        <source>Sign the message to prove you own this CONVIERGE address</source>
+        <translation>Подпишите сообщение, чтобы подтвердить свой адрес CONVIERGE</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -562,16 +562,16 @@
         <translation>Панель вкладок</translation>
     </message>
     <message>
-        <source>CNNVIERGE Core</source>
-        <translation>CNNVIERGE Core</translation>
+        <source>CONVIERGE Core</source>
+        <translation>CONVIERGE Core</translation>
     </message>
     <message>
-        <source>Send coins to a CNNVIERGE address</source>
-        <translation>Отправить монеты на CNNVIERGE адрес</translation>
+        <source>Send coins to a CONVIERGE address</source>
+        <translation>Отправить монеты на CONVIERGE адрес</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and concierge: URIs)</source>
-        <translation>Запросить платежи (генерирует QR-код и CNNVIERGE: URI)</translation>
+        <translation>Запросить платежи (генерирует QR-код и CONVIERGE: URI)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -582,16 +582,16 @@
         <translation>Обзор мастернод</translation>
     </message>
     <message>
-        <source>&amp;About CNNVIERGE Core</source>
-        <translation>&amp;О CNNVIERGE Core</translation>
+        <source>&amp;About CONVIERGE Core</source>
+        <translation>&amp;О CONVIERGE Core</translation>
     </message>
     <message>
-        <source>Show information about CNNVIERGE Core</source>
-        <translation>Показать информацию о CNNVIERGE Core</translation>
+        <source>Show information about CONVIERGE Core</source>
+        <translation>Показать информацию о CONVIERGE Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for CNNVIERGE</source>
-        <translation>Изменение параметров конфигурации CNNVIERGE</translation>
+        <source>Modify configuration options for CONVIERGE</source>
+        <translation>Изменение параметров конфигурации CONVIERGE</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -630,12 +630,12 @@
         <translation>Окно обзора блока</translation>
     </message>
     <message>
-        <source>CNNVIERGE Core client</source>
-        <translation>Клиент CNNVIERGE Core</translation>
+        <source>CONVIERGE Core client</source>
+        <translation>Клиент CONVIERGE Core</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to CNNVIERGE network</source>
-        <translation><numerusform>%n активное подключение к сети CNNVIERGE</numerusform><numerusform>%n активных подключений к сети CNNVIERGE</numerusform><numerusform>%n активных подключений к сети CNNVIERGE</numerusform><numerusform>%n активных подключений к сети CNNVIERGE</numerusform></translation>
+        <source>%n active connection(s) to CONVIERGE network</source>
+        <translation><numerusform>%n активное подключение к сети CONVIERGE</numerusform><numerusform>%n активных подключений к сети CONVIERGE</numerusform><numerusform>%n активных подключений к сети CONVIERGE</numerusform><numerusform>%n активных подключений к сети CONVIERGE</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -962,8 +962,8 @@ Address: %4
         <translation>Изменить адрес отправки</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid CNNVIERGE address.</source>
-        <translation>Введенный адрес "%1" не является CNNVIERGE адресом.</translation>
+        <source>The entered address "%1" is not a valid CONVIERGE address.</source>
+        <translation>Введенный адрес "%1" не является CONVIERGE адресом.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1008,16 +1008,16 @@ Address: %4
         <translation>версия</translation>
     </message>
     <message>
-        <source>CNNVIERGE Core</source>
-        <translation>CNNVIERGE Core</translation>
+        <source>CONVIERGE Core</source>
+        <translation>CONVIERGE Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-бит)</translation>
     </message>
     <message>
-        <source>About CNNVIERGE Core</source>
-        <translation>О CNNVIERGE Core</translation>
+        <source>About CONVIERGE Core</source>
+        <translation>О CONVIERGE Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1059,16 +1059,16 @@ Address: %4
         <translation>Добро пожаловать</translation>
     </message>
     <message>
-        <source>Welcome to CNNVIERGE Core.</source>
-        <translation>Добро пожаловать в CNNVIERGE Core.</translation>
+        <source>Welcome to CONVIERGE Core.</source>
+        <translation>Добро пожаловать в CONVIERGE Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where CNNVIERGE Core will store its data.</source>
-        <translation>Поскольку это первый запуск программы, вы можете выбрать, где будут храниться данные CNNVIERGE Core.</translation>
+        <source>As this is the first time the program is launched, you can choose where CONVIERGE Core will store its data.</source>
+        <translation>Поскольку это первый запуск программы, вы можете выбрать, где будут храниться данные CONVIERGE Core.</translation>
     </message>
     <message>
-        <source>CNNVIERGE Core will download and store a copy of the CNNVIERGE block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>CNNVIERGE Core загрузит и сохранит копию цепочки блоков CNNVIERGE. Каталог будет занимать около %1GB и со временем размер будет увеличиваться. Кроме того, в этом каталоге будет храниться кошелек.</translation>
+        <source>CONVIERGE Core will download and store a copy of the CONVIERGE block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>CONVIERGE Core загрузит и сохранит копию цепочки блоков CONVIERGE. Каталог будет занимать около %1GB и со временем размер будет увеличиваться. Кроме того, в этом каталоге будет храниться кошелек.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1079,8 +1079,8 @@ Address: %4
         <translation>Использовать другой каталог данных:</translation>
     </message>
     <message>
-        <source>CNNVIERGE Core</source>
-        <translation>CNNVIERGE Core</translation>
+        <source>CONVIERGE Core</source>
+        <translation>CONVIERGE Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1237,12 +1237,12 @@ Address: %4
         <translation>Введите адрес для отправки</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other CNNVIERGE addresses after it matures.
-To Add: enter percentage to give and CNNVIERGE address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other CONVIERGE addresses after it matures.
+To Add: enter percentage to give and CONVIERGE address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
-        <translation>MultiSend позволяет вам автоматически отправлять до 100% вознаграждения за мастерноды и удерживание, после их созревания, на другие CNNVIERGE адреса.
-Для добавления: введите передаваемый процент и CNNVIERGE адрес для добавления к вектору MultiSend.
+        <translation>MultiSend позволяет вам автоматически отправлять до 100% вознаграждения за мастерноды и удерживание, после их созревания, на другие CONVIERGE адреса.
+Для добавления: введите передаваемый процент и CONVIERGE адрес для добавления к вектору MultiSend.
 Для удаления: введите удаляемый адрес и нажмите удалить.
 MultiSend будет неактивен до тех пор, пока вы не нажмете Включить</translation>
     </message>
@@ -1412,16 +1412,16 @@ Please check the address and try again.</source>
         <translation>Настройка Перемешивания</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening CNNVIERGE's configuration screen.</source>
-        <translation>Перемешивание было успешно выставлено на стандартные значения (%1 и 2 цикла). Вы в любой момент можете это изменить, открыв окно настройки CNNVIERGE.</translation>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening CONVIERGE's configuration screen.</source>
+        <translation>Перемешивание было успешно выставлено на стандартные значения (%1 и 2 цикла). Вы в любой момент можете это изменить, открыв окно настройки CONVIERGE.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening CNNVIERGE's configuration screen.</source>
-        <translation>Перемешивание было успешно выбрано как высокое (%1 и 8 циклов). Вы в любой момент можете это изменить, открыв окно настройки CNNVIERGE.</translation>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening CONVIERGE's configuration screen.</source>
+        <translation>Перемешивание было успешно выбрано как высокое (%1 и 8 циклов). Вы в любой момент можете это изменить, открыв окно настройки CONVIERGE.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening CNNVIERGE's configuration screen.</source>
-        <translation>Перемешивание было успешно выставлено на максимальное (%1 и 16 циклов). Вы в любой момент можете это изменить, открыв окно настройки CNNVIERGE.</translation>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening CONVIERGE's configuration screen.</source>
+        <translation>Перемешивание было успешно выставлено на максимальное (%1 и 16 циклов). Вы в любой момент можете это изменить, открыв окно настройки CONVIERGE.</translation>
     </message>
 </context>
 <context>
@@ -1482,8 +1482,8 @@ Please check the address and try again.</source>
         <translation>Отключив проведение неподтвержденных изменений все изменения о транзакции &lt;br/&gt;не будут использованы пока транзакция не получит хотя бы одно подтверждение.&lt;br/&gt;Также это влияет на расчет вашего баланса.</translation>
     </message>
     <message>
-        <source>Automatically open the CNNVIERGE client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматически открыть клиентский порт CNNVIERGE через роутер. Ваш роутер должен поддерживать UPnP, а сам сервис должен быть включен.</translation>
+        <source>Automatically open the CONVIERGE client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматически открыть клиентский порт CONVIERGE через роутер. Ваш роутер должен поддерживать UPnP, а сам сервис должен быть включен.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1502,12 +1502,12 @@ Please check the address and try again.</source>
         <translation>Эксперт</translation>
     </message>
     <message>
-        <source>Automatically start CNNVIERGE after logging in to the system.</source>
-        <translation>Автоматически запускать CNNVIERGE после входа в систему.</translation>
+        <source>Automatically start CONVIERGE after logging in to the system.</source>
+        <translation>Автоматически запускать CONVIERGE после входа в систему.</translation>
     </message>
     <message>
-        <source>&amp;Start CNNVIERGE on system login</source>
-        <translation>&amp;Запускать CNNVIERGE при входе в систему</translation>
+        <source>&amp;Start CONVIERGE on system login</source>
+        <translation>&amp;Запускать CONVIERGE при входе в систему</translation>
     </message>
     <message>
         <source>This setting determines the amount of individual masternodes that an input will be anonymized through.&lt;br/&gt;More rounds of anonymization gives a higher degree of privacy, but also costs more in fees.</source>
@@ -1522,8 +1522,8 @@ Please check the address and try again.</source>
         <translation>При достижении этого значения Перемешивание будет отключено.</translation>
     </message>
     <message>
-        <source>Amount of CNNVIERGE to keep anonymized</source>
-        <translation>Количество CNNVIERGE, держащихся анонимизированными</translation>
+        <source>Amount of CONVIERGE to keep anonymized</source>
+        <translation>Количество CONVIERGE, держащихся анонимизированными</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1550,8 +1550,8 @@ Please check the address and try again.</source>
         <translation>&amp;Сеть</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting CNNVIERGE.</source>
-        <translation>Здесь можно выставить язык интерфейса. Изменения вступят в силу после перезапуска CNNVIERGE.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting CONVIERGE.</source>
+        <translation>Здесь можно выставить язык интерфейса. Изменения вступят в силу после перезапуска CONVIERGE.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
@@ -1564,8 +1564,8 @@ https://www.transifex.com/concierge-project/concierge-project-translations</tran
         <translation>Карта порта, использующего &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the CNNVIERGE network through a SOCKS5 proxy.</source>
-        <translation>Подключиться к сети CNNVIERGE через SOCKS5 прокси.</translation>
+        <source>Connect to the CONVIERGE network through a SOCKS5 proxy.</source>
+        <translation>Подключиться к сети CONVIERGE через SOCKS5 прокси.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1803,8 +1803,8 @@ https://www.transifex.com/concierge-project/concierge-project-translations</tran
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The CNNVIERGE address to sign the message with</source>
-        <translation>Адрес CNNVIERGE для подписи сообщения с помощью</translation>
+        <source>The CONVIERGE address to sign the message with</source>
+        <translation>Адрес CONVIERGE для подписи сообщения с помощью</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1827,8 +1827,8 @@ https://www.transifex.com/concierge-project/concierge-project-translations</tran
         <translation>Копировать текущую подпись в системный буфер обмена</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CNNVIERGE address</source>
-        <translation>Подпишите сообщение, чтобы подтвердить свой адрес CNNVIERGE</translation>
+        <source>Sign the message to prove you own this CONVIERGE address</source>
+        <translation>Подпишите сообщение, чтобы подтвердить свой адрес CONVIERGE</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -1866,8 +1866,8 @@ https://www.transifex.com/concierge-project/concierge-project-translations</tran
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>CNNVIERGE Core</source>
-        <translation>CNNVIERGE Core</translation>
+        <source>CONVIERGE Core</source>
+        <translation>CONVIERGE Core</translation>
     </message>
     </context>
 <context>
@@ -1992,8 +1992,8 @@ https://www.transifex.com/concierge-project/concierge-project-translations</tran
         <translation>Copyright (C) 2014-%i Разработчики Dash Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The CNNVIERGE Core Developers</source>
-        <translation>Copyright (C) 2015-%i Разработчики CNNVIERGE Core</translation>
+        <source>Copyright (C) 2015-%i The CONVIERGE Core Developers</source>
+        <translation>Copyright (C) 2015-%i Разработчики CONVIERGE Core</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

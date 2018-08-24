@@ -214,16 +214,16 @@
         <translation>&amp;Eines</translation>
     </message>
     <message>
-        <source>CNNVIERGE Core</source>
-        <translation>CNNVIERGE Core</translation>
+        <source>CONVIERGE Core</source>
+        <translation>CONVIERGE Core</translation>
     </message>
     <message>
-        <source>&amp;About CNNVIERGE Core</source>
-        <translation>&amp;Sobre CNNVIERGE Core</translation>
+        <source>&amp;About CONVIERGE Core</source>
+        <translation>&amp;Sobre CONVIERGE Core</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to CNNVIERGE network</source>
-        <translation><numerusform>%n connexió activa a la xarxa CNNVIERGE</numerusform><numerusform>%n connexions actives a la xarxa CNNVIERGE</numerusform></translation>
+        <source>%n active connection(s) to CONVIERGE network</source>
+        <translation><numerusform>%n connexió activa a la xarxa CONVIERGE</numerusform><numerusform>%n connexions actives a la xarxa CONVIERGE</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -392,12 +392,12 @@
         <translation>versió</translation>
     </message>
     <message>
-        <source>CNNVIERGE Core</source>
-        <translation>CNNVIERGE Core</translation>
+        <source>CONVIERGE Core</source>
+        <translation>CONVIERGE Core</translation>
     </message>
     <message>
-        <source>About CNNVIERGE Core</source>
-        <translation>Sobre CNNVIERGE Core</translation>
+        <source>About CONVIERGE Core</source>
+        <translation>Sobre CONVIERGE Core</translation>
     </message>
     <message>
         <source>Usage:</source>
@@ -415,12 +415,12 @@
         <translation>Benvingut</translation>
     </message>
     <message>
-        <source>Welcome to CNNVIERGE Core.</source>
-        <translation>Benvingut a CNNVIERGE Core.</translation>
+        <source>Welcome to CONVIERGE Core.</source>
+        <translation>Benvingut a CONVIERGE Core.</translation>
     </message>
     <message>
-        <source>CNNVIERGE Core</source>
-        <translation>CNNVIERGE Core</translation>
+        <source>CONVIERGE Core</source>
+        <translation>CONVIERGE Core</translation>
     </message>
     <message>
         <source>Error</source>
@@ -888,8 +888,8 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>CNNVIERGE Core</source>
-        <translation>CNNVIERGE Core</translation>
+        <source>CONVIERGE Core</source>
+        <translation>CONVIERGE Core</translation>
     </message>
     <message>
         <source>Version %1</source>

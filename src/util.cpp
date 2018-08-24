@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The CNNVIERGE developers
+// Copyright (c) 2015-2017 The CONVIERGE developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -105,7 +105,7 @@ std::string to_internal(const std::string&);
 
 using namespace std;
 
-//CNNVIERGE only features
+//CONVIERGE only features
 bool fMasterNode = false;
 string strMasterNodePrivKey = "";
 string strMasterNodeAddr = "";
@@ -231,7 +231,7 @@ bool LogAcceptCategory(const char* category)
             const vector<string>& categories = mapMultiArgs["-debug"];
             ptrCategory.reset(new set<string>(categories.begin(), categories.end()));
             // thread_specific_ptr automatically deletes the set when the thread ends.
-            // "concierge" is a composite category enabling all CNNVIERGE-related debug output
+            // "concierge" is a composite category enabling all CONVIERGE-related debug output
             if (ptrCategory->count(string("concierge"))) {
                 ptrCategory->insert(string("obfuscation"));
                 ptrCategory->insert(string("swifttx"));
@@ -421,13 +421,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-// Windows < Vista: C:\Documents and Settings\Username\Application Data\CNNVIERGE
-// Windows >= Vista: C:\Users\Username\AppData\Roaming\CNNVIERGE
-// Mac: ~/Library/Application Support/CNNVIERGE
+// Windows < Vista: C:\Documents and Settings\Username\Application Data\CONVIERGE
+// Windows >= Vista: C:\Users\Username\AppData\Roaming\CONVIERGE
+// Mac: ~/Library/Application Support/CONVIERGE
 // Unix: ~/.concierge
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "CNNVIERGE";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "CONVIERGE";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -439,7 +439,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     TryCreateDirectory(pathRet);
-    return pathRet / "CNNVIERGE";
+    return pathRet / "CONVIERGE";
 #else
     // Unix
     return pathRet / ".concierge";

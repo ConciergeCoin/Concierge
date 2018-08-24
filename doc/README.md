@@ -1,13 +1,13 @@
-CNNVIERGE Core
+CONVIERGE Core
 =====================
 
 Setup
 ---------------------
-[CNNVIERGE Core](http://concierge.org/wallet) is the original CNNVIERGE client and it builds the backbone of the network. However, it downloads and stores the entire history of CNNVIERGE transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[CONVIERGE Core](http://concierge.org/wallet) is the original CONVIERGE client and it builds the backbone of the network. However, it downloads and stores the entire history of CONVIERGE transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
-The following are some helpful notes on how to run CNNVIERGE on your native platform.
+The following are some helpful notes on how to run CONVIERGE on your native platform.
 
 ### Unix
 
@@ -22,18 +22,18 @@ Unpack the files into a directory, and then run concierge-qt.exe.
 
 ### OSX
 
-Drag CNNVIERGE-Qt to your applications folder, and then run CNNVIERGE-Qt.
+Drag CONVIERGE-Qt to your applications folder, and then run CONVIERGE-Qt.
 
 ### Need Help?
 
-* See the documentation at the [CNNVIERGE Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
+* See the documentation at the [CONVIERGE Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [CNNVIERGE Forum](http://forum.concierge.org/).
-* Join one of our Slack groups [CNNVIERGE Slack Groups](https://concierge.org/slack-logins/).
+* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [CONVIERGE Forum](http://forum.concierge.org/).
+* Join one of our Slack groups [CONVIERGE Slack Groups](https://concierge.org/slack-logins/).
 
 Building
 ---------------------
-The following are developer notes on how to build CNNVIERGE on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build CONVIERGE on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OSX Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -41,7 +41,7 @@ The following are developer notes on how to build CNNVIERGE on your native platf
 
 Development
 ---------------------
-The Concierge repo's [root README](https://github.com/CNNVIERGE-Project/CNNVIERGE/blob/master/README.md) contains relevant information on the development process and automated testing.
+The Concierge repo's [root README](https://github.com/CONVIERGE-Project/CONVIERGE/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
@@ -55,8 +55,8 @@ The Concierge repo's [root README](https://github.com/CNNVIERGE-Project/CNNVIERG
 
 ### Resources
 
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [CNNVIERGE](http://forum.concierge.org/) forum.
-* Join the [CNNVIERGE-Dev](https://concierge-dev.slack.com/) Slack group ([Sign-Up](https://concierge-dev.herokuapp.com/)).
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [CONVIERGE](http://forum.concierge.org/) forum.
+* Join the [CONVIERGE-Dev](https://concierge-dev.slack.com/) Slack group ([Sign-Up](https://concierge-dev.herokuapp.com/)).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

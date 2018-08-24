@@ -58,12 +58,12 @@
         <translation>Endereços de recebimento</translation>
     </message>
     <message>
-        <source>These are your CNNVIERGE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Esses são seus endereços CNNVIERGE para enviar pagamentos. Sempre confira a quantidade e os endereços de destino antes de enviar moedas.</translation>
+        <source>These are your CONVIERGE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Esses são seus endereços CONVIERGE para enviar pagamentos. Sempre confira a quantidade e os endereços de destino antes de enviar moedas.</translation>
     </message>
     <message>
-        <source>These are your CNNVIERGE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Esses são seus endereços CNNVIERGE para receber pagamentos. É recomendado usar um novo endereço para cada transação.</translation>
+        <source>These are your CONVIERGE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Esses são seus endereços CONVIERGE para receber pagamentos. É recomendado usar um novo endereço para cada transação.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,8 +172,8 @@
         <translation>Confirmar encriptação da carteira</translation>
     </message>
     <message>
-        <source>CNNVIERGE will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CCCs from being stolen by malware infecting your computer.</source>
-        <translation>CNNVIERGE encerrará para terminar o processo de encriptação. Lembre-se que encriptar sua carteira não protege completamente suas CCCs contra roubo por malware infectando seu computador.</translation>
+        <source>CONVIERGE will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CCCs from being stolen by malware infecting your computer.</source>
+        <translation>CONVIERGE encerrará para terminar o processo de encriptação. Lembre-se que encriptar sua carteira não protege completamente suas CCCs contra roubo por malware infectando seu computador.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>

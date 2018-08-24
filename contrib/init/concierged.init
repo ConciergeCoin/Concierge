@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#  concierged The CNNVIERGE core server.
+#  concierged The CONVIERGE core server.
 #
 #
 # chkconfig: 345 80 20

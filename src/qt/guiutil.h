@@ -30,7 +30,7 @@ class QUrl;
 class QWidget;
 QT_END_NAMESPACE
 
-/** Utility functions used by the CNNVIERGE Qt UI.
+/** Utility functions used by the CONVIERGE Qt UI.
  */
 namespace GUIUtil
 {
@@ -38,7 +38,7 @@ namespace GUIUtil
 QString dateTimeStr(const QDateTime& datetime);
 QString dateTimeStr(qint64 nTime);
 
-// Render CNNVIERGE addresses in monospace font
+// Render CONVIERGE addresses in monospace font
 QFont bitcoinAddressFont();
 
 // Set up widgets for address and amounts

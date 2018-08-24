@@ -62,11 +62,11 @@
         <translation>Modtageradresse</translation>
     </message>
     <message>
-        <source>These are your CNNVIERGE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your CONVIERGE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Dine adresser til at sende betalinger med. Kontroller altid både beløb og modtageradresse før afsendelse.</translation>
     </message>
     <message>
-        <source>These are your CNNVIERGE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your CONVIERGE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>Dette er dine modtager adresser. Det anbefales at anvende en ny adresse til hver transaktion</translation>
     </message>
     <message>

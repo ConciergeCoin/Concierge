@@ -1,5 +1,5 @@
 [Unit]
-Description=CNNVIERGE's distributed currency daemon
+Description=CONVIERGE's distributed currency daemon
 After=network.target
 
 [Service]
