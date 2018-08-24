@@ -19,14 +19,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "CONVIERGE"
-            VALUE "FileDescription",    "CONVIERGE Core (OSS GUI client for CONVIERGE)"
+            VALUE "CompanyName",        "CONCIERGE"
+            VALUE "FileDescription",    "CONCIERGE Core (OSS GUI client for CONCIERGE)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "concierge-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
             VALUE "OriginalFilename",   "concierge-qt.exe"
-            VALUE "ProductName",        "CONVIERGE Core"
+            VALUE "ProductName",        "CONCIERGE Core"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

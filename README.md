@@ -1,4 +1,4 @@
-<h2><strong>CONVIERGE Repository (Version 2.1.7)</strong></h2>
+<h2><strong>CONCIERGE Repository (Version 2.1.7)</strong></h2>
 <p>More information at concierge.org Visit our ANN thread at bitcointalk.org/index.php?topic=1262920</p>
 <h3><strong>Coin specs:</strong></h3>
 <p><strong><span style="color: #800080;"><em>Algo:</em></span></strong></p>
@@ -59,7 +59,7 @@
 <p>&nbsp;</p>
 <p>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
 <p>&nbsp;</p>
-<p>CONVIERGE is a cutting edge cryptocurrency, with many features not available in most other cryptocurrencies.</p>
+<p>CONCIERGE is a cutting edge cryptocurrency, with many features not available in most other cryptocurrencies.</p>
 <p>Anonymized transactions using coin mixing technology, we call it <em>Obfuscation</em>.</p>
 <p>Fast transactions featuring guaranteed zero confirmation transactions, we call it <em>SwiftTX</em>.</p>
 <p>Decentralized blockchain voting providing for consensus based advancement of the current Masternode technology used to secure the network and provide the above features, each Masternode is secured with collateral of 10K CCC</p>

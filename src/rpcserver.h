@@ -95,7 +95,7 @@ public:
 };
 
 /**
- * CONVIERGE RPC command dispatcher.
+ * CONCIERGE RPC command dispatcher.
  */
 class CRPCTable
 {

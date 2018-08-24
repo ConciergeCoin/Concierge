@@ -148,8 +148,8 @@
         <translation>Confirmer le cryptage du portefeuille</translation>
     </message>
     <message>
-        <source>CONVIERGE will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CCCs from being stolen by malware infecting your computer.</source>
-        <translation>CONVIERGE va maintenant se fermer pour finir le processus cryptage. Notez que le cryptage de votre portefeuille ne peut pas complètement protéger vos CCCs d'un vol par un malware ayant infecté votre ordinateur. </translation>
+        <source>CONCIERGE will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CCCs from being stolen by malware infecting your computer.</source>
+        <translation>CONCIERGE va maintenant se fermer pour finir le processus cryptage. Notez que le cryptage de votre portefeuille ne peut pas complètement protéger vos CCCs d'un vol par un malware ayant infecté votre ordinateur. </translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -215,8 +215,8 @@
         <translation>Adresse :</translation>
     </message>
     <message>
-        <source>The CONVIERGE address to sign the message with</source>
-        <translation>L'adresse CONVIERGE avec laquelle signer le message</translation>
+        <source>The CONCIERGE address to sign the message with</source>
+        <translation>L'adresse CONCIERGE avec laquelle signer le message</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -247,8 +247,8 @@
         <translation>Copier la signature actuelle dans le presse-papier</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CONVIERGE address</source>
-        <translation>Signer le message pour prouver que vous possédez cette adresse CONVIERGE</translation>
+        <source>Sign the message to prove you own this CONCIERGE address</source>
+        <translation>Signer le message pour prouver que vous possédez cette adresse CONCIERGE</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -267,12 +267,12 @@
         <translation>BIP 38 Décrypter</translation>
     </message>
     <message>
-        <source>The CONVIERGE address the message was signed with</source>
-        <translation>L'adresse CONVIERGE avec laquelle le message a été signé</translation>
+        <source>The CONCIERGE address the message was signed with</source>
+        <translation>L'adresse CONCIERGE avec laquelle le message a été signé</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified CONVIERGE address</source>
-        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse CONVIERGE renseignée</translation>
+        <source>Verify the message to ensure it was signed with the specified CONCIERGE address</source>
+        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse CONCIERGE renseignée</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -506,8 +506,8 @@
         <translation>&amp;Aide</translation>
     </message>
     <message>
-        <source>Send coins to a CONVIERGE address</source>
-        <translation>Envoyer des pièces à une adresse CONVIERGE</translation>
+        <source>Send coins to a CONCIERGE address</source>
+        <translation>Envoyer des pièces à une adresse CONCIERGE</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -518,16 +518,16 @@
         <translation>Afficher les masternodes</translation>
     </message>
     <message>
-        <source>Modify configuration options for CONVIERGE</source>
-        <translation>Modifier les options de configuration pour CONVIERGE</translation>
+        <source>Modify configuration options for CONCIERGE</source>
+        <translation>Modifier les options de configuration pour CONCIERGE</translation>
     </message>
     <message>
-        <source>Sign messages with your CONVIERGE addresses to prove you own them</source>
-        <translation>Signer les messages avec votre adresse CONVIERGE pour prouver qu'elles sont bien à vous.</translation>
+        <source>Sign messages with your CONCIERGE addresses to prove you own them</source>
+        <translation>Signer les messages avec votre adresse CONCIERGE pour prouver qu'elles sont bien à vous.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified CONVIERGE addresses</source>
-        <translation>Vérifier les messages afin de s'assurer qu'ils sont signés avec l'adresse CONVIERGE spécifié</translation>
+        <source>Verify messages to ensure they were signed with specified CONCIERGE addresses</source>
+        <translation>Vérifier les messages afin de s'assurer qu'ils sont signés avec l'adresse CONCIERGE spécifié</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -538,8 +538,8 @@
         <translation>Crypter et décrypter les clés privées en utilisant une phrase secrète</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to CONVIERGE network</source>
-        <translation><numerusform>%n connection(s) au réseau CONVIERGE</numerusform><numerusform>%n connection(s) au réseau CONVIERGE</numerusform></translation>
+        <source>%n active connection(s) to CONCIERGE network</source>
+        <translation><numerusform>%n connection(s) au réseau CONCIERGE</numerusform><numerusform>%n connection(s) au réseau CONCIERGE</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -842,8 +842,8 @@ Adresse : %4
         <translation>Modifier l'adresse d'envoi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid CONVIERGE address.</source>
-        <translation>L'adresse entrée "%1" n'est pas une adresse CONVIERGE valide</translation>
+        <source>The entered address "%1" is not a valid CONCIERGE address.</source>
+        <translation>L'adresse entrée "%1" n'est pas une adresse CONCIERGE valide</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1461,8 +1461,8 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Payer à :</translation>
     </message>
     <message>
-        <source>The CONVIERGE address to send the payment to</source>
-        <translation>L'adresse CONVIERGE à laquelle envoyer le paiement</translation>
+        <source>The CONCIERGE address to send the payment to</source>
+        <translation>L'adresse CONCIERGE à laquelle envoyer le paiement</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1507,7 +1507,7 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Signer le message</translation>
     </message>
     <message>
-        <source>The CONVIERGE address to sign the message with</source>
+        <source>The CONCIERGE address to sign the message with</source>
         <translation>L</translation>
     </message>
     <message>
@@ -1535,16 +1535,16 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Copier la signature actuelle dans le presse-papier</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CONVIERGE address</source>
-        <translation>Signer le message pour prouver que vous possédez cette adresse CONVIERGE</translation>
+        <source>Sign the message to prove you own this CONCIERGE address</source>
+        <translation>Signer le message pour prouver que vous possédez cette adresse CONCIERGE</translation>
     </message>
     <message>
-        <source>The CONVIERGE address the message was signed with</source>
-        <translation>L'adresse CONVIERGE avec laquelle le message a été signé</translation>
+        <source>The CONCIERGE address the message was signed with</source>
+        <translation>L'adresse CONCIERGE avec laquelle le message a été signé</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified CONVIERGE address</source>
-        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse CONVIERGE renseignée</translation>
+        <source>Verify the message to ensure it was signed with the specified CONCIERGE address</source>
+        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse CONCIERGE renseignée</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>

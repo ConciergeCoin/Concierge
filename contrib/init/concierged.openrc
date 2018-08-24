@@ -16,8 +16,8 @@ BITCOIND_USER=${BITCOIND_USER:-concierge}
 BITCOIND_GROUP=${BITCOIND_GROUP:-concierge}
 BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/concierged}
 
-name="CONVIERGE Core Daemon"
-description="CONVIERGE crypto-currency p2p network daemon"
+name="CONCIERGE Core Daemon"
+description="CONCIERGE crypto-currency p2p network daemon"
 
 command="/usr/bin/concierged"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \

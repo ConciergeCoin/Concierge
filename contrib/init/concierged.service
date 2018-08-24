@@ -1,5 +1,5 @@
 [Unit]
-Description=CONVIERGE's distributed currency daemon
+Description=CONCIERGE's distributed currency daemon
 After=network.target
 
 [Service]
