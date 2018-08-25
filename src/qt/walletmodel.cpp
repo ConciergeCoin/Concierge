@@ -1,6 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2018 The Concierge developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -233,7 +234,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
                 return InvalidAmount;
             }
             total += subtotal;
-        } else { // User-entered pivx address / amount:
+        } else { // User-entered concierge address / amount:
             if (!validateAddress(rcp.address)) {
                 return InvalidAddress;
             }
@@ -271,7 +272,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
 
 
         if (recipients[0].useSwiftTX && total > GetSporkValue(SPORK_5_MAX_VALUE) * COIN) {
-            emit message(tr("Send Coins"), tr("SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 PIV.").arg(GetSporkValue(SPORK_5_MAX_VALUE)),
+            emit message(tr("Send Coins"), tr("SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 CCC.").arg(GetSporkValue(SPORK_5_MAX_VALUE)),
                 CClientUIInterface::MSG_ERROR);
             return TransactionCreationFailed;
         }
@@ -280,7 +281,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
         transaction.setTransactionFee(nFeeRequired);
 
         if (recipients[0].useSwiftTX && newTx->GetValueOut() > GetSporkValue(SPORK_5_MAX_VALUE) * COIN) {
-            emit message(tr("Send Coins"), tr("SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 PIV.").arg(GetSporkValue(SPORK_5_MAX_VALUE)),
+            emit message(tr("Send Coins"), tr("SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 CCC.").arg(GetSporkValue(SPORK_5_MAX_VALUE)),
                 CClientUIInterface::MSG_ERROR);
             return TransactionCreationFailed;
         }
@@ -322,7 +323,7 @@ WalletModel::SendCoinsReturn WalletModel::sendCoins(WalletModelTransaction& tran
                 std::string value;
                 rcp.paymentRequest.SerializeToString(&value);
                 newTx->vOrderForm.push_back(make_pair(key, value));
-            } else if (!rcp.message.isEmpty()) // Message from normal pivx:URI (pivx:XyZ...?message=example)
+            } else if (!rcp.message.isEmpty()) // Message from normal concierge:URI (concierge:XyZ...?message=example)
             {
                 newTx->vOrderForm.push_back(make_pair("Message", rcp.message.toStdString()));
             }
@@ -393,13 +394,14 @@ WalletModel::EncryptionStatus WalletModel::getEncryptionStatus() const
 {
     if (!wallet->IsCrypted()) {
         return Unencrypted;
-    } else if (wallet->IsLocked()) {
-        return Locked;
     } else if (wallet->fWalletUnlockAnonymizeOnly) {
         return UnlockedForAnonymizationOnly;
+    } else if (wallet->IsLocked()) {
+        return Locked;
     } else {
         return Unlocked;
     }
+
 }
 
 bool WalletModel::setWalletEncrypted(bool encrypted, const SecureString& passphrase)
@@ -526,6 +528,7 @@ WalletModel::UnlockContext WalletModel::requestUnlock(bool relock)
 
     if (!was_locked && isAnonymizeOnlyUnlocked()) {
         setWalletLocked(true);
+        wallet->fWalletUnlockAnonymizeOnly = false;
         was_locked = getEncryptionStatus() == Locked;
     }
 
@@ -548,9 +551,11 @@ WalletModel::UnlockContext::UnlockContext(WalletModel* wallet, bool valid, bool 
 
 WalletModel::UnlockContext::~UnlockContext()
 {
+/*
     if (valid && relock) {
         wallet->setWalletLocked(true);
     }
+*/
 }
 
 void WalletModel::UnlockContext::CopyFrom(const UnlockContext& rhs)

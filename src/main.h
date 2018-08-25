@@ -2,6 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2018 The Concierge developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,7 +10,7 @@
 #define BITCOIN_MAIN_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/pivx-config.h"
+#include "config/concierge-config.h"
 #endif
 
 #include "amount.h"
@@ -98,6 +99,9 @@ static const unsigned int BLOCK_DOWNLOAD_WINDOW = 1024;
 static const unsigned int DATABASE_WRITE_INTERVAL = 3600;
 /** Maximum length of reject messages. */
 static const unsigned int MAX_REJECT_MESSAGE_LENGTH = 111;
+
+/** Enable bloom filter */
+ static const bool DEFAULT_PEERBLOOMFILTERS = true;
 
 /** "reject" message codes */
 static const unsigned char REJECT_MALFORMED = 0x01;
@@ -289,6 +293,7 @@ struct CDiskTxPos : public CDiskBlockPos {
 
 
 CAmount GetMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree);
+bool MoneyRange(CAmount nValueOut);
 
 /**
  * Check transaction inputs, and make sure any
@@ -610,7 +615,7 @@ struct CBlockTemplate {
     std::vector<int64_t> vTxSigOps;
 };
 
-
+/*
 class CValidationInterface
 {
 protected:
@@ -625,5 +630,5 @@ protected:
     friend void ::UnregisterValidationInterface(CValidationInterface*);
     friend void ::UnregisterAllValidationInterfaces();
 };
-
+*/
 #endif // BITCOIN_MAIN_H

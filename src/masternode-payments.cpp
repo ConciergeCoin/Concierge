@@ -1,5 +1,6 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2018 The Concierge developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -173,7 +174,7 @@ void DumpMasternodePayments()
     LogPrintf("Budget dump finished  %dms\n", GetTimeMillis() - nStart);
 }
 
-bool IsBlockValueValid(const CBlock& block, int64_t nExpectedValue)
+bool IsBlockValueValid(const CBlock& block, CAmount nExpectedValue, CAmount nMinted)
 {
     CBlockIndex* pindexPrev = chainActive.Tip();
     if (pindexPrev == NULL) return true;
@@ -188,7 +189,7 @@ bool IsBlockValueValid(const CBlock& block, int64_t nExpectedValue)
     }
 
     if (nHeight == 0) {
-        LogPrintf("IsBlockValueValid() : WARNING: Couldn't find previous block");
+        LogPrintf("IsBlockValueValid() : WARNING: Couldn't find previous block\n");
     }
 
     if (!masternodeSync.IsSynced()) { //there is no budget data to use to check anything
@@ -196,20 +197,24 @@ bool IsBlockValueValid(const CBlock& block, int64_t nExpectedValue)
         if (nHeight % GetBudgetPaymentCycleBlocks() < 100) {
             return true;
         } else {
-            if (block.vtx[0].GetValueOut() > nExpectedValue) return false;
+            if (nMinted > nExpectedValue) {
+                return false;
+            }
         }
     } else { // we're synced and have data so check the budget schedule
 
         //are these blocks even enabled
         if (!IsSporkActive(SPORK_13_ENABLE_SUPERBLOCKS)) {
-            return block.vtx[0].GetValueOut() <= nExpectedValue;
+            return nMinted <= nExpectedValue;
         }
 
         if (budget.IsBudgetPaymentBlock(nHeight)) {
             //the value of the block is evaluated in CheckBlock
             return true;
         } else {
-            if (block.vtx[0].GetValueOut() > nExpectedValue) return false;
+            if (nMinted > nExpectedValue) {
+                return false;
+            }
         }
     }
 
@@ -253,7 +258,7 @@ bool IsBlockPayeeValid(const CBlock& block, int nBlockHeight)
 }
 
 
-void FillBlockPayee(CMutableTransaction& txNew, int64_t nFees, bool fProofOfStake)
+void FillBlockPayee(CMutableTransaction& txNew, CAmount nFees, bool fProofOfStake)
 {
     CBlockIndex* pindexPrev = chainActive.Tip();
     if (!pindexPrev) return;
@@ -275,28 +280,28 @@ std::string GetRequiredPaymentsString(int nBlockHeight)
 }
 
 void CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, int64_t nFees, bool fProofOfStake)
-{
+{   
     CBlockIndex* pindexPrev = chainActive.Tip();
     if (!pindexPrev) return;
-
+    
     bool hasPayment = true;
     CScript payee;
-
+    
     //spork
     if (!masternodePayments.GetBlockPayee(pindexPrev->nHeight + 1, payee)) {
-        //no masternode detected
+        //no masternode detected 
         CMasternode* winningNode = mnodeman.GetCurrentMasterNode(1);
         if (winningNode) {
             payee = GetScriptForDestination(winningNode->pubKeyCollateralAddress.GetID());
         } else {
-            LogPrintf("CreateNewBlock: Failed to detect masternode to pay\n");
+            LogPrint("masternode","CreateNewBlock: Failed to detect masternode to pay\n");
             hasPayment = false;
         }
     }
-
+    
     CAmount blockValue = GetBlockValue(pindexPrev->nHeight);
     CAmount masternodePayment = GetMasternodePayment(pindexPrev->nHeight, blockValue);
-
+    
     if (hasPayment) {
         if (fProofOfStake) {
             /**For Proof Of Stake vout[0] must be null
@@ -322,12 +327,18 @@ void CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, int64_t nFe
         ExtractDestination(payee, address1);
         CBitcoinAddress address2(address1);
 
-        LogPrintf("Masternode payment of %s to %s\n", FormatMoney(masternodePayment).c_str(), address2.ToString().c_str());
+        LogPrint("masternode","Masternode payment of %s to %s\n", FormatMoney(masternodePayment).c_str(), address2.ToString().c_str());
+    } else {
+      	txNew.vout[0].nValue = blockValue;
     }
 }
 
 int CMasternodePayments::GetMinMasternodePaymentsProto()
-{    return ActiveProtocol();
+{
+    if (IsSporkActive(SPORK_10_MASTERNODE_PAY_UPDATED_NODES))
+        return ActiveProtocol();                          // Allow only updated peers
+    else
+        return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT; // Also allow old peers as long as they are allowed to run
 }
 
 void CMasternodePayments::ProcessMessageMasternodePayments(CNode* pfrom, std::string& strCommand, CDataStream& vRecv)
@@ -353,7 +364,7 @@ void CMasternodePayments::ProcessMessageMasternodePayments(CNode* pfrom, std::st
 
         pfrom->FulfilledRequest("mnget");
         masternodePayments.Sync(pfrom, nCountNeeded);
-        LogPrintf("mnget - Sent Masternode winners to %s\n", pfrom->addr.ToString().c_str());
+        LogPrint("mnpayments", "mnget - Sent Masternode winners to peer %i\n", pfrom->GetId());
     } else if (strCommand == "mnw") { //Masternode Payments Declare Winner
         //this is required in litemodef
         CMasternodePaymentWinner winner;
@@ -506,14 +517,24 @@ bool CMasternodeBlockPayees::IsTransactionValid(const CTransaction& txNew)
     LOCK(cs_vecPayments);
 
     int nMaxSignatures = 0;
+    int nMasternode_Drift_Count = 0;
+    
     std::string strPayeesPossible = "";
 
     CAmount nReward = GetBlockValue(nBlockHeight);
 
-    //account for the fact that all peers do not see the same masternode count. A allowance of being off our masternode count is given
-    //we only need to look at an increased masternode count because as count increases, the reward decreases. This code only checks
-    //for mnPayment >= required, so it only makes sense to check the max node count allowed.
-    CAmount requiredMasternodePayment = GetMasternodePayment(nBlockHeight, nReward, mnodeman.size() + Params().MasternodeCountDrift());
+    if (IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT)) {
+        // Get a stable number of masternodes by ignoring newly activated (< 8000 sec old) masternodes
+        nMasternode_Drift_Count = mnodeman.stable_size() + Params().MasternodeCountDrift();
+    }
+    else {
+        //account for the fact that all peers do not see the same masternode count. A allowance of being off our masternode count is given
+        //we only need to look at an increased masternode count because as count increases, the reward decreases. This code only checks
+        //for mnPayment >= required, so it only makes sense to check the max node count allowed.
+        nMasternode_Drift_Count = mnodeman.size() + Params().MasternodeCountDrift();
+    }
+
+    CAmount requiredMasternodePayment = GetMasternodePayment(nBlockHeight, nReward, nMasternode_Drift_Count);
 
     //require at least 6 signatures
     BOOST_FOREACH (CMasternodePayee& payee, vecPayments)
@@ -630,7 +651,7 @@ bool CMasternodePaymentWinner::IsValid(CNode* pnode, std::string& strError)
     CMasternode* pmn = mnodeman.Find(vinMasternode);
 
     if (!pmn) {
-        strError = strprintf("Unknown Masternode %s", vinMasternode.prevout.ToStringShort());
+        strError = strprintf("Unknown Masternode %s", vinMasternode.prevout.hash.ToString());
         LogPrintf("CMasternodePaymentWinner::IsValid - %s\n", strError);
         mnodeman.AskForMN(pnode, vinMasternode);
         return false;
@@ -648,7 +669,7 @@ bool CMasternodePaymentWinner::IsValid(CNode* pnode, std::string& strError)
         //It's common to have masternodes mistakenly think they are in the top 10
         // We don't want to print all of these messages, or punish them unless they're way off
         if (n > MNPAYMENTS_SIGNATURES_TOTAL * 2) {
-            strError = strprintf("Masternode not in the top %d (%d)", MNPAYMENTS_SIGNATURES_TOTAL, n);
+            strError = strprintf("Masternode not in the top %d (%d)", MNPAYMENTS_SIGNATURES_TOTAL * 2, n);
             LogPrintf("CMasternodePaymentWinner::IsValid - %s\n", strError);
             if (masternodeSync.IsSynced()) Misbehaving(pnode->GetId(), 20);
         }
@@ -683,7 +704,7 @@ bool CMasternodePayments::ProcessBlock(int nBlockHeight)
     if (budget.IsBudgetPaymentBlock(nBlockHeight)) {
         //is budget payment block -- handled by the budgeting software
     } else {
-        LogPrintf("CMasternodePayments::ProcessBlock() Start nHeight %d - vin %s. \n", nBlockHeight, activeMasternode.vin.ToString().c_str());
+        LogPrintf("CMasternodePayments::ProcessBlock() Start nHeight %d - vin %s. \n", nBlockHeight, activeMasternode.vin.prevout.hash.ToString());
 
         // pay to the oldest MN that still had no payment but its input is old enough and it was active long enough
         int nCount = 0;
@@ -747,7 +768,7 @@ bool CMasternodePaymentWinner::SignatureValid()
 
         std::string errorMessage = "";
         if (!obfuScationSigner.VerifyMessage(pmn->pubKeyMasternode, vchSig, strMessage, errorMessage)) {
-            return error("CMasternodePaymentWinner::SignatureValid() - Got bad Masternode address signature %s \n", vinMasternode.ToString().c_str());
+            return error("CMasternodePaymentWinner::SignatureValid() - Got bad Masternode address signature %s\n", vinMasternode.prevout.hash.ToString());
         }
 
         return true;

@@ -2,6 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2018 The Concierge developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -13,7 +14,7 @@
 #define BITCOIN_UTIL_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/pivx-config.h"
+#include "config/concierge-config.h"
 #endif
 
 #include "compat.h"
@@ -29,14 +30,14 @@
 #include <boost/filesystem/path.hpp>
 #include <boost/thread/exceptions.hpp>
 
-//PIVX only features
+//Concierge only features
 
 extern bool fMasterNode;
 extern bool fLiteMode;
 extern bool fEnableSwiftTX;
 extern int nSwiftTXDepth;
 extern int nObfuscationRounds;
-extern int nAnonymizePivxAmount;
+extern int nAnonymizeConciergeAmount;
 extern int nLiquidityProvider;
 extern bool fEnableObfuscation;
 extern int64_t enforceMasternodePaymentsTime;
@@ -181,6 +182,23 @@ bool SoftSetArg(const std::string& strArg, const std::string& strValue);
  */
 bool SoftSetBoolArg(const std::string& strArg, bool fValue);
 
+/**
+ * Format a string to be used as group of options in help messages
+ *
+ * @param message Group name (e.g. "RPC server options:")
+ * @return the formatted string
+ */
+std::string HelpMessageGroup(const std::string& message);
+
+/**
+ * Format a string to be used as option description in help messages
+ *
+ * @param option Option message (e.g. "-rpcuser=<user>")
+ * @param message Option description (e.g. "Username for JSON-RPC connections")
+ * @return the formatted string
+ */
+std::string HelpMessageOpt(const std::string& option, const std::string& message);
+
 void SetThreadPriority(int nPriority);
 void RenameThread(const char* name);
 
@@ -196,7 +214,7 @@ void RenameThread(const char* name);
 template <typename Callable>
 void LoopForever(const char* name, Callable func, int64_t msecs)
 {
-    std::string s = strprintf("pivx-%s", name);
+    std::string s = strprintf("concierge-%s", name);
     RenameThread(s.c_str());
     LogPrintf("%s thread start\n", name);
     try {
@@ -222,7 +240,7 @@ void LoopForever(const char* name, Callable func, int64_t msecs)
 template <typename Callable>
 void TraceThread(const char* name, Callable func)
 {
-    std::string s = strprintf("pivx-%s", name);
+    std::string s = strprintf("concierge-%s", name);
     RenameThread(s.c_str());
     try {
         LogPrintf("%s thread start\n", name);

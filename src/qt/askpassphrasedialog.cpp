@@ -1,6 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2018 The Concierge developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -16,11 +17,11 @@
 #include <QMessageBox>
 #include <QPushButton>
 
-AskPassphraseDialog::AskPassphraseDialog(Mode mode, QWidget* parent) : QDialog(parent),
-                                                                       ui(new Ui::AskPassphraseDialog),
-                                                                       mode(mode),
-                                                                       model(0),
-                                                                       fCapsLock(false)
+AskPassphraseDialog::AskPassphraseDialog(Mode mode, QWidget* parent, WalletModel* model) : QDialog(parent),
+                                                                                           ui(new Ui::AskPassphraseDialog),
+                                                                                           mode(mode),
+                                                                                           model(model),
+                                                                                           fCapsLock(false)
 {
     ui->setupUi(this);
 
@@ -36,6 +37,8 @@ AskPassphraseDialog::AskPassphraseDialog(Mode mode, QWidget* parent) : QDialog(p
     ui->passEdit1->installEventFilter(this);
     ui->passEdit2->installEventFilter(this);
     ui->passEdit3->installEventFilter(this);
+
+    this->model = model;
 
     switch (mode) {
     case Encrypt: // Ask passphrase x2
@@ -68,6 +71,9 @@ AskPassphraseDialog::AskPassphraseDialog(Mode mode, QWidget* parent) : QDialog(p
         ui->warningLabel->setText(tr("Enter the old and new passphrase to the wallet."));
         break;
     }
+
+    ui->anonymizationCheckBox->setChecked(model->isAnonymizeOnlyUnlocked());
+
     textChanged();
     connect(ui->passEdit1, SIGNAL(textChanged(QString)), this, SLOT(textChanged()));
     connect(ui->passEdit2, SIGNAL(textChanged(QString)), this, SLOT(textChanged()));
@@ -81,12 +87,6 @@ AskPassphraseDialog::~AskPassphraseDialog()
     ui->passEdit2->setText(QString(" ").repeated(ui->passEdit2->text().size()));
     ui->passEdit3->setText(QString(" ").repeated(ui->passEdit3->text().size()));
     delete ui;
-}
-
-void AskPassphraseDialog::setModel(WalletModel* model)
-{
-    this->model = model;
-    ui->anonymizationCheckBox->setChecked(model->isAnonymizeOnlyUnlocked());
 }
 
 void AskPassphraseDialog::accept()
@@ -110,7 +110,7 @@ void AskPassphraseDialog::accept()
             break;
         }
         QMessageBox::StandardButton retval = QMessageBox::question(this, tr("Confirm wallet encryption"),
-            tr("Warning: If you encrypt your wallet and lose your passphrase, you will <b>LOSE ALL OF YOUR PIV</b>!") + "<br><br>" + tr("Are you sure you wish to encrypt your wallet?"),
+            tr("Warning: If you encrypt your wallet and lose your passphrase, you will <b>LOSE ALL OF YOUR CCC</b>!") + "<br><br>" + tr("Are you sure you wish to encrypt your wallet?"),
             QMessageBox::Yes | QMessageBox::Cancel,
             QMessageBox::Cancel);
         if (retval == QMessageBox::Yes) {
@@ -118,9 +118,9 @@ void AskPassphraseDialog::accept()
                 if (model->setWalletEncrypted(true, newpass1)) {
                     QMessageBox::warning(this, tr("Wallet encrypted"),
                         "<qt>" +
-                            tr("PIVX will close now to finish the encryption process. "
+                            tr("Concierge will close now to finish the encryption process. "
                                "Remember that encrypting your wallet cannot fully protect "
-                               "your PIVs from being stolen by malware infecting your computer.") +
+                               "your LPCs from being stolen by malware infecting your computer.") +
                             "<br><br><b>" +
                             tr("IMPORTANT: Any previous backups you have made of your wallet file "
                                "should be replaced with the newly generated, encrypted wallet file. "

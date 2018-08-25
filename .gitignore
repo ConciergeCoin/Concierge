@@ -120,3 +120,10 @@ qa/pull-tester/test.*/*
 .project
 /doc/doxygen/
 /nbproject/
+.vs/Concierge/v15/Browse.VC.db
+.vs/Concierge/v15/Browse.VC.db
+.vs/Concierge/v15/Browse.VC.opendb
+.vs/slnx.sqlite
+.vs/ProjectSettings.json
+.vs/Concierge/v15/.suo
+.vs/Convierge/v15/.suo
