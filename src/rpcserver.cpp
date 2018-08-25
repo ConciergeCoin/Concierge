@@ -1,7 +1,8 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The CONCIERGE developers
+// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2018 The Concierge developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -219,10 +220,10 @@ Value stop(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop CONCIERGE server.");
+            "\nStop Concierge server.");
     // Shutdown will take long enough that the response should get back
     StartShutdown();
-    return "CONCIERGE server stopping";
+    return "Concierge server stopping";
 }
 
 
@@ -301,12 +302,32 @@ static const CRPCCommand vRPCCommands[] =
 
         /* Concierge features */
         {"concierge", "masternode", &masternode, true, true, false},
-        {"concierge", "masternodelist", &masternodelist, true, true, false},
+        {"concierge", "listmasternodes", &listmasternodes, true, true, false},
+        {"concierge", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"concierge", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"concierge", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"concierge", "masternodedebug", &masternodedebug, true, true, false},
+        {"concierge", "startmasternode", &startmasternode, true, true, false},
+        {"concierge", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"concierge", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"concierge", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"concierge", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"concierge", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"concierge", "getmasternodescores", &getmasternodescores, true, true, false},
         {"concierge", "mnbudget", &mnbudget, true, true, false},
-        {"concierge", "mnbudgetvoteraw", &mnbudgetvoteraw, true, true, false},
+        {"concierge", "preparebudget", &preparebudget, true, true, false},
+        {"concierge", "submitbudget", &submitbudget, true, true, false},
+        {"concierge", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"concierge", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"concierge", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"concierge", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"concierge", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"concierge", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
         {"concierge", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"concierge", "checkbudgets", &checkbudgets, true, true, false},
         {"concierge", "mnsync", &mnsync, true, true, false},
         {"concierge", "spork", &spork, true, true, false},
+        {"concierge", "getpoolinfo", &getpoolinfo, true, true, false},
 #ifdef ENABLE_WALLET
         {"concierge", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
 
@@ -582,7 +603,7 @@ void StartRPCThreads()
                                                "The username and password MUST NOT be the same.\n"
                                                "If the file does not exist, create it with owner-readable-only file permissions.\n"
                                                "It is also recommended to set alertnotify so you are notified of problems;\n"
-                                               "for example: alertnotify=echo %%s | mail -s \"CONCIERGE Alert\" admin@foo.com\n"),
+                                               "for example: alertnotify=echo %%s | mail -s \"Concierge Alert\" admin@foo.com\n"),
                                              GetConfigFile().string(),
                                              EncodeBase58(&rand_pwd[0], &rand_pwd[0] + 32)),
             "", CClientUIInterface::MSG_ERROR | CClientUIInterface::SECURE);
@@ -1018,6 +1039,17 @@ json_spirit::Value CRPCTable::execute(const std::string& strMethod, const json_s
     } catch (std::exception& e) {
         throw JSONRPCError(RPC_MISC_ERROR, e.what());
     }
+}
+
+std::vector<std::string> CRPCTable::listCommands() const
+{
+    std::vector<std::string> commandList;
+    typedef std::map<std::string, const CRPCCommand*> commandMap;
+
+    std::transform( mapCommands.begin(), mapCommands.end(),
+                   std::back_inserter(commandList),
+                   boost::bind(&commandMap::value_type::first,_1) );
+    return commandList;
 }
 
 std::string HelpExampleCli(string methodname, string args)

@@ -1,4 +1,4 @@
-CONCIERGE Core version 2.2.1 is now available from:
+Concierge Core version 2.3.1 is now available from:
 
   <https://github.com/concierge-project/concierge/releases>
 
@@ -12,7 +12,7 @@ Please report bugs using the issue tracker at github:
 Compatibility
 ==============
 
-CONCIERGE Core is extensively tested on multiple operating systems using
+Concierge Core is extensively tested on multiple operating systems using
 the Linux kernel, macOS 10.8+, and Windows Vista and later.
 
 Microsoft ended support for Windows XP on [April 8th, 2014](https://www.microsoft.com/en-us/WindowsForBusiness/end-of-xp-support),
@@ -20,54 +20,165 @@ No attempt is made to prevent installing or running the software on Windows XP, 
 can still do so at your own risk but be aware that there are known instabilities and issues.
 Please do not report issues about Windows XP to the issue tracker.
 
-CONCIERGE Core should also work on most other Unix-like systems but is not
+Concierge Core should also work on most other Unix-like systems but is not
 frequently tested on them.
 
 Notable Changes
 ===============
 
-Block Data Corruption
----------------------
+RPC changes
+--------------
 
-Additional startup procedures have been added to fix corrupted blockchain databases.
-The majority of users that are experiencing #106 (ConnectBlock() assertion on startup)
-that have tested the new wallet have reported that their corrupt blockchain has
-successfully been repaired. The new code will automatically detect and repair the
-blockchain if it is able to.
+#### Update of RPC commands to comply with the forthcoming RPC Standards PIP ####
 
-If users still experience corruptions with the new wallet and it is not fixed
-with the new startup procedures, it is suggested that they try using the
-`-forcestart` startup flag which will bypass the new procedures altogether, and
-in rare cases allow the wallet to run. If the database is not fixed by either
-the automatic procedures or the `-forcestart` flag, the user should resync the
-blockchain.
+| Old Command | New Command | Notes |
+| --- | --- | --- |
+| `masternode count` | `getmasternodecount` | |
+| `masternode list` | `listmasternodes` | |
+| `masternodelist` | `listmasternodes` | renamed |
+| `masternode connect` | `masternodeconnect` | |
+| `masternode current` | `getcurrentmasternode` | |
+| `masternode debug` | `masternodedebug` | |
+| `masternode enforce` |  | removed |
+| `masternode outputs` | `getmasternodeoutputs` | |
+| `masternode status` | `getmasternodestatus` | |
+| `masternode list-conf` | `listmasternodeconf` | added optional filter |
+| `masternode genkey` | `createmasternodekey` | |
+| `masternode winners` | `listmasternodewinners` | |
+| `masternode start` | `startmasternode` | see notes below |
+| `masternode start-alias` | `startmasternode` | see notes below |
+| `masternode start-<mode>` | `startmasternode` | see notes below |
+| `masternode create` | | removed - not implemented |
+| `masternode calcscore` | `listmasternodescores` | |
+| --- | --- | --- |
+| `mnbudget prepare` | `preparebudget` | see notes below |
+| `mnbudget submit` | `submitbudget` | see notes below |
+| `mnbudget vote-many` | `mnbudgetvote` | see notes below |
+| `mnbudget vote-alias` | `mnbudgetvote` | see notes below |
+| `mnbudget vote` | `mnbudgetvote` | see notes below |
+| `mnbudget getvotes` | `getbudgetvotes` | |
+| `mnbudget getinfo` | `getbudgetinfo` | see notes below |
+| `mnbudget show` | `getbudgetinfo` | see notes below |
+| `mnbudget projection` | `getbudgetprojection` | |
+| `mnbudget check` | `checkbudgets` | |
+| `mnbudget nextblock` | `getnextsuperblock` | |
 
-Additional progress has been made to prevent the wallet crashes that are causing
-the corrupted databases, for example removing the Trading Window (explained below)
-and fixing several other minor memory leaks that were inherited from the version
-of Bitcoin that CONCIERGE was forked from.
+##### `startmasternode` Command #####
+This command now handles all cases for starting a masternode instead of having multiple commands based on the context. Command arguments have changed slightly to allow the user to decide wither or not to re-lock the wallet after the command is run. Below is the help documentation:
 
-RPC Changes
------------
+```
+startmasternode "local|all|many|missing|disabled|alias" lockwallet ( "alias" )
 
-- Exporting or dumping an addresses' private key while the wallet is unlocked for
-  anonymization and Staking only is no longer possible.
+ Attempts to start one or more masternode(s)
 
-- A new command (`getstakingstatus`) has been added that returns the internal conditions
-  for staking to be activated and their status.
+Arguments:
+1. set         (string, required) Specify which set of masternode(s) to start.
+2. lockWallet  (boolean, required) Lock wallet after completion.
+3. alias       (string) Masternode alias. Required if using 'alias' as the set.
 
-- KeePass integration has been removed for the time being due to various inefficiencies
-  with it's code.
+Result: (for 'local' set):
+"status"     (string) Masternode status message
 
-Trading Window Removed
-----------------------
+Result: (for other sets):
+{
+  "overall": "xxxx",     (string) Overall status message
+  "detail": [
+    {
+      "node": "xxxx",    (string) Node name or alias
+      "result": "xxxx",  (string) 'success' or 'failed'
+      "error": "xxxx"    (string) Error message, if failed
+    }
+    ,...
+  ]
+}
 
-The Bittrex trading window in the GUI wallet was problematic with it's memory
-handling, often leaking, and was overall an inefficient use of resources in it's
-current implementation. A revised multi-exchange trading window may be implemented
-at a later date.
+Examples:
+> concierge-cli masternodestart "alias" "my_mn"
+> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "masternodestart", "params": ["alias" "my_mn"] }' -H 'content-type: text/plain;' http://127.0.0.1:51471/
+```
 
-2.2.1 Change log
+##### `preparebudget` & `submitbudget` Commands #####
+Due to the requirement of maintaining backwards compatibility with the legacy command, these two new commands are created to handle the preparation/submission of budget proposals. Future intention is to roll these two commands back into a single command to reduce code-duplication. Paramater arguments currently remain unchanged from the legacy command equivilent.
+
+##### `mnbudgetvote` Command #####
+This command now handles all cases for submitting MN votes on a budget proposal. Backwards compatibility with the legacy command(s) has been retained, with the exception of the `vote-alias` case due to a conflict in paramater type casting. A user running `mnbudget vote-alias` will be instructed to instead use the new `mnvote` command. Below is the full help documentation for this new command:
+
+```
+mnvote "local|many|alias" "votehash" "yes|no" ( "alias" )
+
+Vote on a budget proposal
+
+Arguments:
+1. "mode"      (string, required) The voting mode. 'local' for voting directly from a masternode, 'many' for voting with a MN controller and casting the same vote for each MN, 'alias' for voting with a MN controller and casting a vote for a single MN
+2. "votehash"  (string, required) The vote hash for the proposal
+3. "votecast"  (string, required) Your vote. 'yes' to vote for the proposal, 'no' to vote against
+4. "alias"     (string, required for 'alias' mode) The MN alias to cast a vote for.
+
+Result:
+{
+  "overall": "xxxx",      (string) The overall status message for the vote cast
+  "detail": [
+    {
+      "node": "xxxx",      (string) 'local' or the MN alias
+      "result": "xxxx",    (string) Either 'Success' or 'Failed'
+      "error": "xxxx",     (string) Error message, if vote failed
+    }
+    ,...
+  ]
+}
+
+Examples:
+> concierge-cli mnvote "local" "ed2f83cedee59a91406f5f47ec4d60bf5a7f9ee6293913c82976bd2d3a658041" "yes"
+> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "mnvote", "params": ["local" "ed2f83cedee59a91406f5f47ec4d60bf5a7f9ee6293913c82976bd2d3a658041" "yes"] }' -H 'content-type: text/plain;' http://127.0.0.1:51471/
+```
+
+##### `getbudgetinfo` Command #####
+This command now combines the old `mnbudget show` and `mnbudget getinfo` commands to reduce code duplication while still maintaining backwards compatibility with the legacy commands. Given no parameters, it returns the full list of budget proposals (`mnbudget show`). A single optional parameter allows to return information on just that proposal (`mnbudget getinfo`). Below is the full help documentation:
+
+```
+getbudgetinfo ( "proposal" )
+
+Show current masternode budgets
+
+Arguments:
+1. "proposal"    (string, optional) Proposal name
+
+Result:
+[
+  {
+    "Name": "xxxx",               (string) Proposal Name
+    "URL": "xxxx",                (string) Proposal URL
+    "Hash": "xxxx",               (string) Proposal vote hash
+    "FeeHash": "xxxx",            (string) Proposal fee hash
+    "BlockStart": n,              (numeric) Proposal starting block
+    "BlockEnd": n,                (numeric) Proposal ending block
+    "TotalPaymentCount": n,       (numeric) Number of payments
+    "RemainingPaymentCount": n,   (numeric) Number of remaining payments
+    "PaymentAddress": "xxxx",     (string) Concierge address of payment
+    "Ratio": x.xxx,               (numeric) Ratio of yeas vs nays
+    "Yeas": n,                    (numeric) Number of yea votes
+    "Nays": n,                    (numeric) Number of nay votes
+    "Abstains": n,                (numeric) Number of abstains
+    "TotalPayment": xxx.xxx,      (numeric) Total payment amount
+    "MonthlyPayment": xxx.xxx,    (numeric) Monthly payment amount
+    "IsEstablished": true|false,  (boolean) Established (true) or (false)
+    "IsValid": true|false,        (boolean) Valid (true) or Invalid (false)
+    "IsValidReason": "xxxx",      (string) Error message, if any
+    "fValid": true|false,         (boolean) Valid (true) or Invalid (false)
+  }
+  ,...
+]
+
+Examples:
+> concierge-cli getbudgetprojection
+> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getbudgetprojection", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:51471/
+```
+
+#### Masternode network protocol layer reporting ####
+The results from the `listmasternodes` and `getmasternodecount` commands now includes details about which network protocol layer is being used (IPv4, IPV6, or Tor).
+
+
+2.3.1 Change log
 =================
 
 Detailed release notes follow. This overview includes changes that affect
@@ -76,46 +187,22 @@ the code changes and accompanying discussion, both the pull request and
 git merge commit are mentioned.
 
 ### RPC and other APIs
-- #130 `ccb1526` [RPC] Add `getstakingstatus` method
-- #138 `4319af3` [RPC] Require password when using UnlockAnonymizeOnly
-- #142 `6b5cf7f` [RPC] Remove Keepass code due to Valgrind warnings
-
-### Block and Transaction Handling
-- #146 `bce67cb` [Wallet] Look at last CoinsView block for corruption fix process
-- #154 `1b3c0d7` [Consensus] Don't pass the genesis block through CheckWork
+- #239 `e8b92f4` [RPC] Make 'masternode status' more verbose (Mrs-X)
+- #244 `eac60dd` [RPC] Standardize RPC Commands (Fuzzbawls)
 
 ### P2P Protocol and Network Code
-- #168 `ac912d9` [Wallet] Update checkpoints with v2.2 chain
-- #162 `0c0d080` Remove legacy Dash code IsReferenceNode
-- #163 `96b8b00` [P2P] Change alert key to effectively disable it
-
-### GUI
-- #131 `238977b` [Qt] Adds base CSS styles for various elements
-- #134 `f7cabbe` [Qt] Edit masternode.conf in Qt-wallet
-- #135 `f8f1904` [Qt] Show path to wallet.dat in wallet-repair tab
-- #136 `53705f1` [Qt] Fix false flags for MultiSend notification when sending transactions
-- #137 `ad08051` [Qt] Fix Overview Page Balances when receiving
-- #141 `17a9e0f` [Qt] Squashed trading removal code
-- #151 `0409b12` [Qt] Avoid OpenSSL certstore-related memory leak
-- #165 `0dad320` [Qt] More place for long locales
+- #248 `0d44ca2` [core] fix payment disagreements, reduce log-verbosity (Mrs-X)
 
 ### Miscellaneous
-- #133 `fceb421` [Docs] Add GitHub Issue template and Contributor guidelines
-- #144 `e4e68bc` [Wallet] Reduce usage of atoi to comply with CWE-190
-- #152 `6a1de07` [Trivial] Use LogPrint for repetitive budget logs
-- #157 `41fdeaa` [Budget] Add log for removed budget proposals
-- #166 `d37b4aa` [Utils] Add ExecStop= to example systemd service
-- #167 `a6becee` [Utils] makeseeds script update
+- #240 `1957445` [Debug Log] Increase verbosity of error-message (Mrs-X)
+- #241 #249 `b60118b` `7405e31` Nullpointer reference fixed (Mrs-X)
 
 Credits
 =======
 
 Thanks to everyone who directly contributed to this release:
-
-- Aaron Miller
 - Fuzzbawls
 - Mrs-X
-- Spock
-- presstab
+- amirabrams
 
 As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/concierge-project-translations/).

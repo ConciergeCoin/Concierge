@@ -89,7 +89,7 @@ use old versions of Upstart and do not supply the start-stop-daemon uitility.
 Copy concierged.init to /etc/init.d/concierged. Test by running "service concierged start".
 
 Using this script, you can adjust the path and flags to the concierged program by
-setting the CONCIERGED and FLAGS environment variables in the file
+setting the ConciergeD and FLAGS environment variables in the file
 /etc/sysconfig/concierged. You can also use the DAEMONOPTS environment variable here.
 
 5. Auto-respawn

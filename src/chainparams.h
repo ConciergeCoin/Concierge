@@ -23,7 +23,7 @@ struct CDNSSeedData {
 
 /**
  * CChainParams defines various tweakable parameters of a given instance of the
- * CONCIERGE system. There are three: the main network on which people trade goods
+ * Concierge system. There are three: the main network on which people trade goods
  * and services, the public test network which gets reset from time to time and
  * a regression test mode which is intended for private networks only. It has
  * minimal difficulty to ensure that blocks can be found instantly.
@@ -76,6 +76,7 @@ public:
     int LAST_POW_BLOCK() const { return nLastPOWBlock; }
     int COINBASE_MATURITY() const { return nMaturity; }
     int ModifierUpgradeBlock() const { return nModifierUpdateBlock; }
+    CAmount MaxMoneyOut() const { return nMaxMoneyOut; }
     /** The masternode count that we will allow the see-saw reward payments to be off by */
     int MasternodeCountDrift() const { return nMasternodeCountDrift; }
     /** Make miner stop after a block is found. In RPC, don't return until nGenProcLimit blocks are generated */
@@ -92,6 +93,8 @@ public:
     std::string SporkKey() const { return strSporkKey; }
     std::string ObfuscationPoolDummyAddress() const { return strObfuscationPoolDummyAddress; }
     int64_t StartMasternodePayments() const { return nStartMasternodePayments; }
+	//Central Collateral Amount
+	int MasternodeCollateralAmt() const { return nMasternodeCollateralAmt; }
     CBaseChainParams::Network NetworkID() const { return networkID; }
 
 protected:
@@ -102,6 +105,7 @@ protected:
     //! Raw pub key bytes for the broadcast alert signing key.
     std::vector<unsigned char> vAlertPubKey;
     int nDefaultPort;
+	int nMasternodeCollateralAmt;
     uint256 bnProofOfWorkLimit;
     int nMaxReorganizationDepth;
     int nSubsidyHalvingInterval;
@@ -112,8 +116,10 @@ protected:
     int64_t nTargetSpacing;
     int nLastPOWBlock;
     int nMasternodeCountDrift;
+    int nMasternodeCollateralLimit;
     int nMaturity;
     int nModifierUpdateBlock;
+    CAmount nMaxMoneyOut;
     int nMinerThreads;
     std::vector<CDNSSeedData> vSeeds;
     std::vector<unsigned char> base58Prefixes[MAX_BASE58_TYPES];

@@ -57,6 +57,7 @@ public:
     /// Manage status of main Masternode
     void ManageStatus();
     std::string GetStatus();
+    std::string GetStateString() const;
 
     /// Register remote Masternode
     bool Register(std::string strService, std::string strKey, std::string strTxHash, std::string strOutputIndex, std::string& errorMessage);

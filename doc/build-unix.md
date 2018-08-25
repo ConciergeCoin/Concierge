@@ -1,6 +1,6 @@
 UNIX BUILD NOTES
 ====================
-Some notes on how to build CONCIERGE in Unix.
+Some notes on how to build Concierge in Unix.
 
 Note
 ---------------------
@@ -50,7 +50,7 @@ System requirements
 --------------------
 
 C++ compilers are memory-hungry. It is recommended to have at least 1 GB of
-memory available when compiling CONCIERGE Core. With 512MB of memory or less
+memory available when compiling Concierge Core. With 512MB of memory or less
 compilation will take much longer due to swap thrashing.
 
 Dependency Build Instructions: Ubuntu & Debian
@@ -83,7 +83,7 @@ Optional:
 Dependencies for the GUI: Ubuntu & Debian
 -----------------------------------------
 
-If you want to build CONCIERGE-Qt, make sure that the required packages for Qt development
+If you want to build Concierge-Qt, make sure that the required packages for Qt development
 are installed. Qt 5 is necessary to build the GUI.
 If both Qt 4 and Qt 5 are installed, Qt 5 will be used.
 To build without GUI pass `--without-gui`.
@@ -130,10 +130,10 @@ Berkeley DB
 It is recommended to use Berkeley DB 4.8. If you have to build it yourself:
 
 ```bash
-CONCIERGE_ROOT=$(pwd)
+Concierge_ROOT=$(pwd)
 
 # Pick some path to install BDB to, here we create a directory within the concierge directory
-BDB_PREFIX="${CONCIERGE_ROOT}/db4"
+BDB_PREFIX="${Concierge_ROOT}/db4"
 mkdir -p $BDB_PREFIX
 
 # Fetch the source and verify that it is not tampered with
@@ -148,8 +148,8 @@ cd db-4.8.30.NC/build_unix/
 ../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
 make install
 
-# Configure CONCIERGE Core to use our own-built instance of BDB
-cd $CONCIERGE_ROOT
+# Configure Concierge Core to use our own-built instance of BDB
+cd $Concierge_ROOT
 ./configure (other args...) LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/"
 ```
 
@@ -166,7 +166,7 @@ If you need to build Boost yourself:
 
 Security
 --------
-To help make your CONCIERGE installation more secure by making certain attacks impossible to
+To help make your Concierge installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, binaries are hardened by default.
 This can be disabled with:
 

@@ -30,6 +30,10 @@
         <translation>Supprimer</translation>
     </message>
     <message>
+        <source>Export the data in the current tab to a file</source>
+        <translation>Exporter l</translation>
+    </message>
+    <message>
         <source>&amp;Export</source>
         <translation>Exporter</translation>
     </message>
@@ -148,8 +152,8 @@
         <translation>Confirmer le cryptage du portefeuille</translation>
     </message>
     <message>
-        <source>CONCIERGE will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CCCs from being stolen by malware infecting your computer.</source>
-        <translation>CONCIERGE va maintenant se fermer pour finir le processus cryptage. Notez que le cryptage de votre portefeuille ne peut pas complètement protéger vos CCCs d'un vol par un malware ayant infecté votre ordinateur. </translation>
+        <source>Concierge will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your LPCs from being stolen by malware infecting your computer.</source>
+        <translation>Concierge va maintenant se fermer pour finir le processus cryptage. Notez que le cryptage de votre portefeuille ne peut pas complètement protéger vos LPCs d'un vol par un malware ayant infecté votre ordinateur. </translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -215,8 +219,8 @@
         <translation>Adresse :</translation>
     </message>
     <message>
-        <source>The CONCIERGE address to sign the message with</source>
-        <translation>L'adresse CONCIERGE avec laquelle signer le message</translation>
+        <source>The Concierge address to sign the message with</source>
+        <translation>L'adresse Concierge avec laquelle signer le message</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -247,8 +251,8 @@
         <translation>Copier la signature actuelle dans le presse-papier</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CONCIERGE address</source>
-        <translation>Signer le message pour prouver que vous possédez cette adresse CONCIERGE</translation>
+        <source>Sign the message to prove you own this Concierge address</source>
+        <translation>Signer le message pour prouver que vous possédez cette adresse Concierge</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -267,12 +271,12 @@
         <translation>BIP 38 Décrypter</translation>
     </message>
     <message>
-        <source>The CONCIERGE address the message was signed with</source>
-        <translation>L'adresse CONCIERGE avec laquelle le message a été signé</translation>
+        <source>The Concierge address the message was signed with</source>
+        <translation>L'adresse Concierge avec laquelle le message a été signé</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified CONCIERGE address</source>
-        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse CONCIERGE renseignée</translation>
+        <source>Verify the message to ensure it was signed with the specified Concierge address</source>
+        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse Concierge renseignée</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -354,6 +358,10 @@
         <translation>Portefeuille</translation>
     </message>
     <message>
+        <source>Show general overview of wallet</source>
+        <translation>Vue d'ensemble du portefeuille</translation>
+    </message>
+    <message>
         <source>&amp;Send</source>
         <translation>Envoyer</translation>
     </message>
@@ -404,6 +412,14 @@
     <message>
         <source>Encrypt the private keys that belong to your wallet</source>
         <translation>Crypter les clés privées appartenant à votre portefeuille</translation>
+    </message>
+    <message>
+        <source>&amp;Backup Wallet...</source>
+        <translation>Sauvegarde du portefeuille...</translation>
+    </message>
+    <message>
+        <source>Backup wallet to another location</source>
+        <translation>Sauvegarder ailleurs le portefeuille </translation>
     </message>
     <message>
         <source>&amp;Change Passphrase...</source>
@@ -470,6 +486,10 @@
         <translation>Ouvrir le fichier de configuration</translation>
     </message>
     <message>
+        <source>Show Automatic &amp;Backups</source>
+        <translation>Montrer les sauvegardes automatiques</translation>
+    </message>
+    <message>
         <source>Show automatically created wallet backups</source>
         <translation>Montrer les sauvegardes de portefeuille créées automatiquements</translation>
     </message>
@@ -478,8 +498,16 @@
         <translation>Adresses d'envoie</translation>
     </message>
     <message>
+        <source>Show the list of used sending addresses and labels</source>
+        <translation>Montrer la liste des adresses et libellés d'envoies utilisés</translation>
+    </message>
+    <message>
         <source>&amp;Receiving addresses...</source>
         <translation>Adresses de réception</translation>
+    </message>
+    <message>
+        <source>Show the list of used receiving addresses and labels</source>
+        <translation>Montrer la liste des adresses et libellés de réception utilisés</translation>
     </message>
     <message>
         <source>Open &amp;URI...</source>
@@ -506,8 +534,8 @@
         <translation>&amp;Aide</translation>
     </message>
     <message>
-        <source>Send coins to a CONCIERGE address</source>
-        <translation>Envoyer des pièces à une adresse CONCIERGE</translation>
+        <source>Send coins to a Concierge address</source>
+        <translation>Envoyer des pièces à une adresse Concierge</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -518,16 +546,16 @@
         <translation>Afficher les masternodes</translation>
     </message>
     <message>
-        <source>Modify configuration options for CONCIERGE</source>
-        <translation>Modifier les options de configuration pour CONCIERGE</translation>
+        <source>Modify configuration options for Concierge</source>
+        <translation>Modifier les options de configuration pour Concierge</translation>
     </message>
     <message>
-        <source>Sign messages with your CONCIERGE addresses to prove you own them</source>
-        <translation>Signer les messages avec votre adresse CONCIERGE pour prouver qu'elles sont bien à vous.</translation>
+        <source>Sign messages with your Concierge addresses to prove you own them</source>
+        <translation>Signer les messages avec votre adresse Concierge pour prouver qu'elles sont bien à vous.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified CONCIERGE addresses</source>
-        <translation>Vérifier les messages afin de s'assurer qu'ils sont signés avec l'adresse CONCIERGE spécifié</translation>
+        <source>Verify messages to ensure they were signed with specified Concierge addresses</source>
+        <translation>Vérifier les messages afin de s'assurer qu'ils sont signés avec l'adresse Concierge spécifié</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -536,10 +564,6 @@
     <message>
         <source>Encrypt and decrypt private keys using a passphrase</source>
         <translation>Crypter et décrypter les clés privées en utilisant une phrase secrète</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n active connection(s) to CONCIERGE network</source>
-        <translation><numerusform>%n connection(s) au réseau CONCIERGE</numerusform><numerusform>%n connection(s) au réseau CONCIERGE</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -557,25 +581,9 @@
         <source>Up to date</source>
         <translation>A jour</translation>
     </message>
-    <message numerus="yes">
-        <source>%n hour(s)</source>
-        <translation><numerusform>%n heure</numerusform><numerusform>%n heures </numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n day(s)</source>
-        <translation><numerusform>%n jours</numerusform><numerusform>%n jours</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n week(s)</source>
-        <translation><numerusform>%n semaine</numerusform><numerusform>%n semaines</numerusform></translation>
-    </message>
     <message>
         <source>%1 and %2</source>
         <translation>%1 et %2</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n year(s)</source>
-        <translation><numerusform>%n an</numerusform><numerusform>%n ans</numerusform></translation>
     </message>
     <message>
         <source>%1 behind</source>
@@ -591,7 +599,7 @@
     </message>
     <message>
         <source>Error</source>
-        <translation>Erreur </translation>
+        <translation>Erreur</translation>
     </message>
     <message>
         <source>Warning</source>
@@ -719,6 +727,10 @@ Adresse : %4
         <translation>Copier l'adresse</translation>
     </message>
     <message>
+        <source>Copy label</source>
+        <translation>Copier le montant</translation>
+    </message>
+    <message>
         <source>Copy amount</source>
         <translation>Copier le montant</translation>
     </message>
@@ -842,8 +854,8 @@ Adresse : %4
         <translation>Modifier l'adresse d'envoi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid CONCIERGE address.</source>
-        <translation>L'adresse entrée "%1" n'est pas une adresse CONCIERGE valide</translation>
+        <source>The entered address "%1" is not a valid Concierge address.</source>
+        <translation>L'adresse entrée "%1" n'est pas une adresse Concierge valide</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -920,18 +932,6 @@ Adresse : %4
     <message>
         <source>0</source>
         <translation>0</translation>
-    </message>
-    <message>
-        <source>All Masternodes</source>
-        <translation>Toutes les masternodes</translation>
-    </message>
-    <message>
-        <source>Filter List:</source>
-        <translation>Liste de filtres :</translation>
-    </message>
-    <message>
-        <source>Filter masternode list</source>
-        <translation>Filtrer la liste des masternodes</translation>
     </message>
     <message>
         <source>Confirm masternode start</source>
@@ -1343,7 +1343,7 @@ Veuillez vérifier l'adresse et réessayer.</translation>
     </message>
     <message>
         <source>Quantity:</source>
-        <translation>Quantité</translation>
+        <translation>Quantité :</translation>
     </message>
     <message>
         <source>Amount:</source>
@@ -1419,7 +1419,7 @@ Veuillez vérifier l'adresse et réessayer.</translation>
     </message>
     <message>
         <source>Copy fee</source>
-        <translation>Copier la comission</translation>
+        <translation>Copier la commission</translation>
     </message>
     <message>
         <source>Copy after fee</source>
@@ -1461,8 +1461,8 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Payer à :</translation>
     </message>
     <message>
-        <source>The CONCIERGE address to send the payment to</source>
-        <translation>L'adresse CONCIERGE à laquelle envoyer le paiement</translation>
+        <source>The Concierge address to send the payment to</source>
+        <translation>L'adresse Concierge à laquelle envoyer le paiement</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1474,7 +1474,7 @@ Veuillez vérifier l'adresse et réessayer.</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
-        <translation>Copié l'adresse depuis le presse-papier</translation>
+        <translation>Copier l'adresse depuis le presse-papier</translation>
     </message>
     <message>
         <source>Alt+P</source>
@@ -1507,8 +1507,8 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Signer le message</translation>
     </message>
     <message>
-        <source>The CONCIERGE address to sign the message with</source>
-        <translation>L</translation>
+        <source>The Concierge address to sign the message with</source>
+        <translation>L'adresse Concierge avec laquelle signer le message</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1520,7 +1520,7 @@ Veuillez vérifier l'adresse et réessayer.</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
-        <translation>Copié l'adresse depuis le presse-papier</translation>
+        <translation>Copier l'adresse depuis le presse-papier</translation>
     </message>
     <message>
         <source>Alt+P</source>
@@ -1535,16 +1535,16 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Copier la signature actuelle dans le presse-papier</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CONCIERGE address</source>
-        <translation>Signer le message pour prouver que vous possédez cette adresse CONCIERGE</translation>
+        <source>Sign the message to prove you own this Concierge address</source>
+        <translation>Signer le message pour prouver que vous possédez cette adresse Concierge</translation>
     </message>
     <message>
-        <source>The CONCIERGE address the message was signed with</source>
-        <translation>L'adresse CONCIERGE avec laquelle le message a été signé</translation>
+        <source>The Concierge address the message was signed with</source>
+        <translation>L'adresse Concierge avec laquelle le message a été signé</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified CONCIERGE address</source>
-        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse CONCIERGE renseignée</translation>
+        <source>Verify the message to ensure it was signed with the specified Concierge address</source>
+        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse Concierge renseignée</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1629,9 +1629,49 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <source>Address</source>
         <translation>Adresse</translation>
     </message>
-    </context>
+    <message>
+        <source>Date and time that the transaction was received.</source>
+        <translation>Date et heure a laquelle la transaction fut reçue</translation>
+    </message>
+    <message>
+        <source>Type of transaction.</source>
+        <translation>Type de transaction.</translation>
+    </message>
+    <message>
+        <source>Destination address of transaction.</source>
+        <translation>Adresse destinataire de la transaction.</translation>
+    </message>
+    <message>
+        <source>Amount removed from or added to balance.</source>
+        <translation>Montant retiré ou ajouté a la balance.</translation>
+    </message>
+</context>
 <context>
     <name>TransactionView</name>
+    <message>
+        <source>All</source>
+        <translation>Tous</translation>
+    </message>
+    <message>
+        <source>Today</source>
+        <translation>Aujourd'hui</translation>
+    </message>
+    <message>
+        <source>This week</source>
+        <translation>Cette semaine</translation>
+    </message>
+    <message>
+        <source>This month</source>
+        <translation>Ce mois</translation>
+    </message>
+    <message>
+        <source>Last month</source>
+        <translation>Le mois dernier</translation>
+    </message>
+    <message>
+        <source>This year</source>
+        <translation>Cette année</translation>
+    </message>
     <message>
         <source>Copy address</source>
         <translation>Copier l'adresse</translation>
@@ -1690,14 +1730,18 @@ Veuillez vérifier l'adresse et réessayer.</translation>
     <name>WalletView</name>
     <message>
         <source>&amp;Export</source>
-        <translation>&amp;Exporter</translation>
+        <translation>Exporter</translation>
+    </message>
+    <message>
+        <source>Export the data in the current tab to a file</source>
+        <translation>Exporter l</translation>
     </message>
     </context>
 <context>
     <name>concierge-core</name>
     <message>
         <source>Error</source>
-        <translation>Erreur </translation>
+        <translation>Erreur</translation>
     </message>
     <message>
         <source>Information</source>

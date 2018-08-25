@@ -13,7 +13,7 @@
  * for both concierged and concierge-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("CONCIERGE Core");
+const std::string CLIENT_NAME("Concierge Core");
 
 /**
  * Client version number

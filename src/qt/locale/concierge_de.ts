@@ -43,11 +43,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Wählen Sie die Adresse aus, an die Sie CONCIERGE überweisen möchten</translation>
+        <translation>Wählen Sie die Adresse aus, an die Sie Concierge überweisen möchten</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Wählen Sie die Adresse aus, über die Sie CONCIERGE empfangen wollen</translation>
+        <translation>Wählen Sie die Adresse aus, über die Sie Concierge empfangen wollen</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -62,12 +62,12 @@
         <translation>Empfangsadressen</translation>
     </message>
     <message>
-        <source>These are your CONCIERGE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dies sind ihre CONCIERGE-Adressen zum Tätigen von Überweisungen. Bitte prüfen Sie den Betrag und die Empfangsadresse, bevor Sie CONCIERGE überweisen.</translation>
+        <source>These are your Concierge addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dies sind ihre Concierge-Adressen zum Tätigen von Überweisungen. Bitte prüfen Sie den Betrag und die Empfangsadresse, bevor Sie Concierge überweisen.</translation>
     </message>
     <message>
-        <source>These are your CONCIERGE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dies sind ihre CONCIERGE-Adressen zum Empfangen von Zahlungen. Es wird empfohlen für jede Transaktion eine neue Empfangsadresse zu verwenden.</translation>
+        <source>These are your Concierge addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dies sind ihre Concierge-Adressen zum Empfangen von Zahlungen. Es wird empfohlen für jede Transaktion eine neue Empfangsadresse zu verwenden.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Wallet-Verschlüsselung bestätigen</translation>
     </message>
     <message>
-        <source>CONCIERGE will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CCCs from being stolen by malware infecting your computer.</source>
-        <translation>Die Anwendungs wird nun geschlossen um die Verschlüsselung abzuschließen. Bitte beachten Sie, dass auch Verschlüsselung nicht nicht vollständig vor Diebstahl ihrer CCCs durch Schadsoftware schützt, die ihren Computer befällt.</translation>
+        <source>Concierge will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your LPCs from being stolen by malware infecting your computer.</source>
+        <translation>Die Anwendungs wird nun geschlossen um die Verschlüsselung abzuschließen. Bitte beachten Sie, dass auch Verschlüsselung nicht nicht vollständig vor Diebstahl ihrer LPCs durch Schadsoftware schützt, die ihren Computer befällt.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -185,7 +185,7 @@
     </message>
     <message>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CCC&lt;/b&gt;!</source>
-        <translation>Warnung: Wenn Sie ihre Wallet verschlüsseln und Ihre Passphrase verlieren werden Sie &lt;b&gt;alle ihre CCCs verlieren&lt;/b&gt;!</translation>
+        <translation>Warnung: Wenn Sie ihre Wallet verschlüsseln und Ihre Passphrase verlieren werden Sie &lt;b&gt;alle ihre LPCs verlieren&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -239,8 +239,16 @@
         <translation>&amp;BIP 38 Verschlüsselung</translation>
     </message>
     <message>
+        <source>Enter a Concierge Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Gib eine Concierge Adresse ein welche mit BIP 38 verschlüsselt werden soll. Gib ein Passwort in die mittleren Box ein. Drücke auf verschlüsseln, um den privaten schlüssel zu errechenen.</translation>
+    </message>
+    <message>
         <source>Address:</source>
         <translation>Adresse:</translation>
+    </message>
+    <message>
+        <source>The Concierge address to sign the message with</source>
+        <translation>Concierge Adresse mit welcher die Nachricht signiert werden soll</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -263,10 +271,126 @@
         <translation>Passphrase: </translation>
     </message>
     <message>
+        <source>Encrypted Key:</source>
+        <translation>Geschützer Schlüssel:</translation>
+    </message>
+    <message>
+        <source>Copy the current signature to the system clipboard</source>
+        <translation>Kopiert die aktuelle Signatur in den Zwischenspeicher</translation>
+    </message>
+    <message>
+        <source>Sign the message to prove you own this Concierge address</source>
+        <translation>Signiere die Nachricht um zu Beweisen, dass du diese Concierge Adresse besitzt</translation>
+    </message>
+    <message>
+        <source>Encrypt &amp;Key</source>
+        <translation>Verschlüsselt &amp;Schlüssel</translation>
+    </message>
+    <message>
+        <source>Reset all sign message fields</source>
+        <translation>Setze alle signierten Nachrichten Felder zurück</translation>
+    </message>
+    <message>
         <source>Clear &amp;All</source>
         <translation>&amp;Alles zurücksetzen</translation>
     </message>
-    </context>
+    <message>
+        <source>&amp;BIP 38 Decrypt</source>
+        <translation>&amp;BIP 38 Entschlüsseln</translation>
+    </message>
+    <message>
+        <source>Enter the BIP 38 encrypted private key. Enter the passphrase in the middle box. Click Decrypt Key to compute the private key. After the key is decrypted, clicking 'Import Address' will add this private key to the wallet.</source>
+        <translation>Geben Sie den BIP 38 verschlüsselten privaten Schlüssel ein. Geben Sie die Passphrase im mittleren Feld ein. Klicken Sie auf Entschlüsselung, um den privaten Schlüssel zu berechnen. Nachdem der Schlüssel entschlüsselt wurde, klicken Sie auf 'Adresse importieren', fügen Sie diesen privaten Schlüssel der Wallet hinzu.</translation>
+    </message>
+    <message>
+        <source>The Concierge address the message was signed with</source>
+        <translation>Die Concierge Adresse mit welcher die Nachricht signiert wurde.</translation>
+    </message>
+    <message>
+        <source>Verify the message to ensure it was signed with the specified Concierge address</source>
+        <translation>Überprüfen Sie die Nachricht, um sicherzustellen, dass sie mit der angegebenen Concierge-Adresse signiert wurde.</translation>
+    </message>
+    <message>
+        <source>Decrypt &amp;Key</source>
+        <translation>Entschlüsseln &amp;Schlüssel</translation>
+    </message>
+    <message>
+        <source>Reset all verify message fields</source>
+        <translation>Zurücksetzen aller überprüften Felder.</translation>
+    </message>
+    <message>
+        <source>Decrypted Key:</source>
+        <translation>Entschlüsselter Schlüssel:</translation>
+    </message>
+    <message>
+        <source>Import Address</source>
+        <translation>Adresse importieren</translation>
+    </message>
+    <message>
+        <source>Click "Decrypt Key" to compute key</source>
+        <translation>Klicke "Schlüssel entschlüsseln" um den Schlüssel zu berechnen</translation>
+    </message>
+    <message>
+        <source>The entered passphrase is invalid. </source>
+        <translation>Die eingegebene Passphrase ist ungültig. </translation>
+    </message>
+    <message>
+        <source>Allowed: 0-9,a-z,A-Z,</source>
+        <translation>Zulässig: 0-9,a-z,A-Z</translation>
+    </message>
+    <message>
+        <source>The entered address is invalid.</source>
+        <translation>Die eingegebene Adresse ist falsch</translation>
+    </message>
+    <message>
+        <source>Please check the address and try again.</source>
+        <translation>Bitte die Adresse prüfen und erneut eingeben</translation>
+    </message>
+    <message>
+        <source>The entered address does not refer to a key.</source>
+        <translation>Die eingegebene Adresse passt nicht zu einem Schlüssel</translation>
+    </message>
+    <message>
+        <source>Wallet unlock was cancelled.</source>
+        <translation>Wallet-Entsperrung wurde abgebrochen.</translation>
+    </message>
+    <message>
+        <source>Private key for the entered address is not available.</source>
+        <translation>Privater Schlüssel für die eingegebene Adresse ist nicht verfügbar</translation>
+    </message>
+    <message>
+        <source>Failed to decrypt.</source>
+        <translation>Entschlüsselung fehlgeschlagen.</translation>
+    </message>
+    <message>
+        <source>Please check the key and passphrase and try again.</source>
+        <translation>Bitte überprüfe den Schlüssel und die Passphrase und versuche es erneut.</translation>
+    </message>
+    <message>
+        <source>Data Not Valid.</source>
+        <translation>Daten fehlerhaft</translation>
+    </message>
+    <message>
+        <source>Please try again.</source>
+        <translation>Bitte versuche es noch einmal</translation>
+    </message>
+    <message>
+        <source>Please wait while key is imported</source>
+        <translation>Bitte warten. Schlüssel wird importiert..</translation>
+    </message>
+    <message>
+        <source>Key Already Held By Wallet</source>
+        <translation>Schlüssel bereits im Wallet vorhanden</translation>
+    </message>
+    <message>
+        <source>Error Adding Key To Wallet</source>
+        <translation>Fehler beim hinzufügen des Schlüssels zum Wallet</translation>
+    </message>
+    <message>
+        <source>Successfully Added Private Key To Wallet</source>
+        <translation>Erfolgreiches hinzufügen eines privaten Schlüssels zum Wallet</translation>
+    </message>
+</context>
 <context>
     <name>BitcoinGUI</name>
     <message>
@@ -451,7 +575,7 @@
     </message>
     <message numerus="yes">
         <source>Processed %n blocks of transaction history.</source>
-        <translation><numerusform>%n Block des Transaktionsverlaufs verarbeitet.</numerusform><numerusform>%n Blöcke des Transaktionsverlaufs verarbeitet.</numerusform></translation>
+        <translation><numerusform>Verarbeitet %n Blöcke der Transaktionsgeschichte.</numerusform><numerusform>Verarbeitet %n Blöcke der Transaktionsgeschichte.</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing additional data: %p%</source>
@@ -478,12 +602,12 @@
         <translation>Registerkartenleiste</translation>
     </message>
     <message>
-        <source>CONCIERGE Core</source>
-        <translation>CONCIERGE Core</translation>
+        <source>Concierge Core</source>
+        <translation>Concierge Core</translation>
     </message>
     <message>
-        <source>Send coins to a CONCIERGE address</source>
-        <translation>An eine CONCIERGE-Adresse überweisen</translation>
+        <source>Send coins to a Concierge address</source>
+        <translation>An eine Concierge-Adresse überweisen</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and concierge: URIs)</source>
@@ -498,28 +622,68 @@
         <translation>Masternodes durchsuchen</translation>
     </message>
     <message>
-        <source>&amp;About CONCIERGE Core</source>
-        <translation>Über.CONCIERGE Core</translation>
+        <source>&amp;About Concierge Core</source>
+        <translation>Über.Concierge Core</translation>
     </message>
     <message>
-        <source>Show information about CONCIERGE Core</source>
-        <translation>Zeigt Informationen über CONCIERGE Core</translation>
+        <source>Show information about Concierge Core</source>
+        <translation>Zeigt Informationen über Concierge Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for CONCIERGE</source>
-        <translation>Konfiguration von CONCIERGE verändern</translation>
+        <source>Modify configuration options for Concierge</source>
+        <translation>Konfiguration von Concierge verändern</translation>
     </message>
     <message>
-        <source>Sign messages with your CONCIERGE addresses to prove you own them</source>
-        <translation>Unterschreibt eine Nachricht mit Ihrer CONCIERGE-Adresse und beweist, dass sie Ihnen gehört</translation>
+        <source>Sign messages with your Concierge addresses to prove you own them</source>
+        <translation>Unterschreibt eine Nachricht mit Ihrer Concierge-Adresse und beweist, dass sie Ihnen gehört</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified CONCIERGE addresses</source>
-        <translation>Überprüft eine Nachricht um zu prüfen ob diese mit einer bestimmten CONCIERGE-Adresse signiert wurde</translation>
+        <source>Verify messages to ensure they were signed with specified Concierge addresses</source>
+        <translation>Überprüft eine Nachricht um zu prüfen ob diese mit einer bestimmten Concierge-Adresse signiert wurde</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
         <translation>&amp;BIP38 Hilfsprogramm</translation>
+    </message>
+    <message>
+        <source>&amp;MultiSend</source>
+        <translation>&amp;MultiSend</translation>
+    </message>
+    <message>
+        <source>MultiSend Settings</source>
+        <translation>MultiSend Einstellungen</translation>
+    </message>
+    <message>
+        <source>Open Wallet &amp;Configuration File</source>
+        <translation>Öffne Wallet &amp;Einstellungsdatei </translation>
+    </message>
+    <message>
+        <source>Open &amp;Masternode Configuration File</source>
+        <translation>Öffne &amp;Masternode Einstellungsdatei </translation>
+    </message>
+    <message>
+        <source>Open Masternode configuration file</source>
+        <translation>Öffne Masternode Einstellungsdatei</translation>
+    </message>
+    <message>
+        <source>Open a Concierge: URI or payment request</source>
+        <translation>Öffne eine Concierge: URI or Zahlungsanfrage</translation>
+    </message>
+    <message>
+        <source>&amp;Blockchain explorer</source>
+        <translation>&amp;Blockchain Betrachter</translation>
+    </message>
+    <message>
+        <source>Block explorer window</source>
+        <translation>Blockchain Betrachter Fenster</translation>
+    </message>
+    <message>
+        <source>Show the Concierge Core help message to get a list with possible Concierge command-line options</source>
+        <translation>Zeige die Concierge-Core Hilfe, um mögliche Concierge Kommando-Zeilen-Optionen anzuzeigen</translation>
+    </message>
+    <message>
+        <source>Concierge Core client</source>
+        <translation>Concierge Core Client</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -541,25 +705,9 @@
         <source>Up to date</source>
         <translation>Auf aktuellem Stand</translation>
     </message>
-    <message numerus="yes">
-        <source>%n hour(s)</source>
-        <translation><numerusform>%n Stunde</numerusform><numerusform>%n Stunden</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n day(s)</source>
-        <translation><numerusform>%n Tag</numerusform><numerusform>%n Tage</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n week(s)</source>
-        <translation><numerusform>%n Woche</numerusform><numerusform>%n Wochen</numerusform></translation>
-    </message>
     <message>
         <source>%1 and %2</source>
         <translation>%1 und %2</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n year(s)</source>
-        <translation><numerusform>%n Jahr</numerusform><numerusform>%n Jahre</numerusform></translation>
     </message>
     <message>
         <source>%1 behind</source>
@@ -598,6 +746,10 @@
         <translation>Eingehende Transaktion</translation>
     </message>
     <message>
+        <source>Sent MultiSend transaction</source>
+        <translation>Versende MultiSend Transaktion</translation>
+    </message>
+    <message>
         <source>Date: %1
 Amount: %2
 Type: %3
@@ -609,8 +761,24 @@ Typ: %3
 Adresse: %4</translation>
     </message>
     <message>
+        <source>Staking is active
+ MultiSend: %1</source>
+        <translation>Staking ist aktiviert
+ MultiSend: %1</translation>
+    </message>
+    <message>
         <source>Active</source>
         <translation>Aktiv</translation>
+    </message>
+    <message>
+        <source>Not Active</source>
+        <translation>Nicht Aktiv</translation>
+    </message>
+    <message>
+        <source>Staking is not active
+ MultiSend: %1</source>
+        <translation>Staking ist nicht aktiviert
+ MultiSend: %1</translation>
     </message>
     <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
@@ -638,6 +806,10 @@ Adresse: %4</translation>
     <message>
         <source>Search</source>
         <translation>Suche</translation>
+    </message>
+    <message>
+        <source>TextLabel</source>
+        <translation>TextEtikett</translation>
     </message>
     <message>
         <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (concierge.conf).</source>
@@ -678,8 +850,12 @@ Adresse: %4</translation>
         <translation>Gebühr:</translation>
     </message>
     <message>
+        <source>Coin Selection</source>
+        <translation>Münzenauswahl </translation>
+    </message>
+    <message>
         <source>Dust:</source>
-        <translation>"Dust":</translation>
+        <translation>Abzug:</translation>
     </message>
     <message>
         <source>After Fee:</source>
@@ -690,16 +866,56 @@ Adresse: %4</translation>
         <translation>Wechselgeld:</translation>
     </message>
     <message>
+        <source>(un)select all</source>
+        <translation>(nicht) alle auswählen</translation>
+    </message>
+    <message>
+        <source>toggle lock state</source>
+        <translation>Sperrzustand umschalten</translation>
+    </message>
+    <message>
+        <source>Tree mode</source>
+        <translation>Baumansicht</translation>
+    </message>
+    <message>
+        <source>List mode</source>
+        <translation>Listenansicht </translation>
+    </message>
+    <message>
+        <source>(1 locked)</source>
+        <translation>(1 gesperrt)</translation>
+    </message>
+    <message>
         <source>Amount</source>
         <translation>Betrag</translation>
+    </message>
+    <message>
+        <source>Received with label</source>
+        <translation>Empfange mit Bezeichnung</translation>
+    </message>
+    <message>
+        <source>Received with address</source>
+        <translation>Empfangen mit Adresse</translation>
+    </message>
+    <message>
+        <source>DS Rounds</source>
+        <translation>DS-Runden</translation>
     </message>
     <message>
         <source>Date</source>
         <translation>Datum</translation>
     </message>
     <message>
+        <source>Confirmations</source>
+        <translation>Betätigungen</translation>
+    </message>
+    <message>
         <source>Confirmed</source>
         <translation>Bestätigt</translation>
+    </message>
+    <message>
+        <source>Priority</source>
+        <translation>Priorität</translation>
     </message>
     <message>
         <source>Copy address</source>
@@ -718,6 +934,70 @@ Adresse: %4</translation>
         <translation>Transaktions-ID kopieren</translation>
     </message>
     <message>
+        <source>Lock unspent</source>
+        <translation>Sperre Verwendung</translation>
+    </message>
+    <message>
+        <source>Unlock unspent</source>
+        <translation>Entsperre Verwendung</translation>
+    </message>
+    <message>
+        <source>Copy quantity</source>
+        <translation>Kopiere Anzahl</translation>
+    </message>
+    <message>
+        <source>Copy fee</source>
+        <translation>Kopiere Gebühr</translation>
+    </message>
+    <message>
+        <source>Copy after fee</source>
+        <translation>Kopiere nach Gebühr</translation>
+    </message>
+    <message>
+        <source>Copy bytes</source>
+        <translation>Kopiere Bytes</translation>
+    </message>
+    <message>
+        <source>Copy priority</source>
+        <translation>Kopiere Priorität</translation>
+    </message>
+    <message>
+        <source>Copy dust</source>
+        <translation>Kopiere Abzug</translation>
+    </message>
+    <message>
+        <source>Copy change</source>
+        <translation>Kopiere Wechselgeld</translation>
+    </message>
+    <message>
+        <source>Please switch to "List mode" to use this function.</source>
+        <translation>Bitte wechsle zur "Listenansicht" um diese Funktion zu verwenden.</translation>
+    </message>
+    <message>
+        <source>Non-anonymized input selected. &lt;b&gt;Obfuscation will be disabled.&lt;/b&gt;&lt;br&gt;&lt;br&gt;If you still want to use Obfuscation, please deselect all non-nonymized inputs first and then check Obfuscation checkbox again.</source>
+        <translation>Nicht anonymisierter Eingang ausgewählt. &lt;b&gt;&lt;/b&gt;Verschleierung wird deaktiviert. &lt;br&gt;&lt;br&gt;Wenn Sie immer noch verschleiern möchten, bitte deaktivieren Sie zuerst alle nicht-anonymisierten Eingang und überprüfen Sie dann das Verschleierungskontrollkästchen erneut.</translation>
+    </message>
+    <message>
+        <source>highest</source>
+        <translation>höchste</translation>
+    </message>
+    <message>
+        <source>higher</source>
+        <translation>höher</translation>
+    </message>
+    <message>
+        <source>high</source>
+        <translation>hoch</translation>
+    </message>
+    <message>
+        <source>medium-high</source>
+        <translation>mittel-hoch</translation>
+    </message>
+    <message>
+        <source>Can vary +/- %1 duff(s) per input.</source>
+        <translation>Kann um +/- %1 Abzug(s) pro Eingang variieren.</translation>
+    </message>
+    <message>
         <source>n/a</source>
         <translation>k.A.</translation>
     </message>
@@ -726,14 +1006,74 @@ Adresse: %4</translation>
         <translation>mittel</translation>
     </message>
     <message>
+        <source>low-medium</source>
+        <translation>niedrig-mittel</translation>
+    </message>
+    <message>
+        <source>low</source>
+        <translation>niedrig</translation>
+    </message>
+    <message>
+        <source>lower</source>
+        <translation>niedriger</translation>
+    </message>
+    <message>
+        <source>lowest</source>
+        <translation>am niedrigsten</translation>
+    </message>
+    <message>
+        <source>(%1 locked)</source>
+        <translation>(%1 gesperrt)</translation>
+    </message>
+    <message>
+        <source>none</source>
+        <translation>keine</translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation>ja</translation>
+    </message>
+    <message>
         <source>no</source>
         <translation>nein</translation>
+    </message>
+    <message>
+        <source>This label turns red, if the transaction size is greater than 1000 bytes.</source>
+        <translation>Diese Bezeichnung wird rot, wenn die Transaktion größer als 1000 Bytes ist.</translation>
+    </message>
+    <message>
+        <source>This means a fee of at least %1 per kB is required.</source>
+        <translation>Das heißt, eine Gebühr von mindestens %1 pro kB ist notwendig.</translation>
+    </message>
+    <message>
+        <source>Can vary +/- 1 byte per input.</source>
+        <translation>Kann um +/-1 Byte pro Eingang variieren.</translation>
+    </message>
+    <message>
+        <source>Transactions with higher priority are more likely to get included into a block.</source>
+        <translation>Transaktionen mit höherer Priorität werden eher in einen Block aufgenommen.</translation>
+    </message>
+    <message>
+        <source>This label turns red, if the priority is smaller than "medium".</source>
+        <translation>Diese Bezeichnung wird rot, wenn die Priorität kleiner als "mittel" ist.</translation>
+    </message>
+    <message>
+        <source>This label turns red, if any recipient receives an amount smaller than %1.</source>
+        <translation>Diese Bezeichnung wird rot, wenn ein Empfänger einen Betrag erhält, der kleiner ist als %1.</translation>
     </message>
     <message>
         <source>(no label)</source>
         <translation>(keine Bezeichnung)</translation>
     </message>
-    </context>
+    <message>
+        <source>change from %1 (%2)</source>
+        <translation>Wechselgeld von %1 (%2)</translation>
+    </message>
+    <message>
+        <source>(change)</source>
+        <translation>(Wechselgeld)</translation>
+    </message>
+</context>
 <context>
     <name>EditAddressDialog</name>
     <message>
@@ -773,8 +1113,8 @@ Adresse: %4</translation>
         <translation>Zahlungsadresse bearbeiten</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid CONCIERGE address.</source>
-        <translation>Die eingegebene Adresse "%1" ist keine gültige CONCIERGE-Adresse.</translation>
+        <source>The entered address "%1" is not a valid Concierge address.</source>
+        <translation>Die eingegebene Adresse "%1" ist keine gültige Concierge-Adresse.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -819,16 +1159,16 @@ Adresse: %4</translation>
         <translation>Version</translation>
     </message>
     <message>
-        <source>CONCIERGE Core</source>
-        <translation>CONCIERGE Core</translation>
+        <source>Concierge Core</source>
+        <translation>Concierge Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-Bit)</translation>
     </message>
     <message>
-        <source>About CONCIERGE Core</source>
-        <translation>Über CONCIERGE Core</translation>
+        <source>About Concierge Core</source>
+        <translation>Über Concierge Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -843,12 +1183,16 @@ Adresse: %4</translation>
         <translation>Kommandozeilenoptionen</translation>
     </message>
     <message>
-        <source>UI options</source>
-        <translation>UI-Optionen</translation>
+        <source>UI Options:</source>
+        <translation>UI Optionen:</translation>
     </message>
     <message>
-        <source>Choose data directory on startup (default: 0)</source>
-        <translation>Datenverzeichnis beim Starten auswählen (Standard: 0)</translation>
+        <source>Choose data directory on startup (default: %u)</source>
+        <translation>Wähle Datenverzeichnis beim Start (Standard: %u)</translation>
+    </message>
+    <message>
+        <source>Show splash screen on startup (default: %u)</source>
+        <translation>Zeige Startbildschirm beim Start (Standard: %u)</translation>
     </message>
     <message>
         <source>Set language, for example "de_DE" (default: system locale)</source>
@@ -862,10 +1206,6 @@ Adresse: %4</translation>
         <source>Set SSL root certificates for payment request (default: -system-)</source>
         <translation>SSL-Wurzelzertifikate für Zahlungsanforderungen festlegen (Standard: Systemstandard)</translation>
     </message>
-    <message>
-        <source>Show splash screen on startup (default: 1)</source>
-        <translation>Startbildschirm beim Starten anzeigen (Standard: 1)</translation>
-    </message>
 </context>
 <context>
     <name>Intro</name>
@@ -874,16 +1214,16 @@ Adresse: %4</translation>
         <translation>Willkommen</translation>
     </message>
     <message>
-        <source>Welcome to CONCIERGE Core.</source>
-        <translation>Willkommen zu CONCIERGE Core.</translation>
+        <source>Welcome to Concierge Core.</source>
+        <translation>Willkommen zu Concierge Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where CONCIERGE Core will store its data.</source>
-        <translation>Da dies das erste Mal ist, dass Sie CONCIERGE Core starten, legen Sie jetzt bitte fest, an welchem Ort die Daten gespeichert werden sollen.</translation>
+        <source>As this is the first time the program is launched, you can choose where Concierge Core will store its data.</source>
+        <translation>Da dies das erste Mal ist, dass Sie Concierge Core starten, legen Sie jetzt bitte fest, an welchem Ort die Daten gespeichert werden sollen.</translation>
     </message>
     <message>
-        <source>CONCIERGE Core will download and store a copy of the CONCIERGE block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>CONCIERGE Core wird die Blockchain laden und lokal speichern. Dafür sind mindestens %1GB freier Speicherplatz erforderlich. Der Speicherbedarf wird mit der Zeit anwachsen. Die Wallet wird ebenfalls in diesem Verzeichnis gespeichert.</translation>
+        <source>Concierge Core will download and store a copy of the Concierge block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Concierge Core wird die Blockchain laden und lokal speichern. Dafür sind mindestens %1GB freier Speicherplatz erforderlich. Der Speicherbedarf wird mit der Zeit anwachsen. Die Wallet wird ebenfalls in diesem Verzeichnis gespeichert.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -894,8 +1234,8 @@ Adresse: %4</translation>
         <translation>Ein benutzerdefiniertes Datenverzeichnis verwenden:</translation>
     </message>
     <message>
-        <source>CONCIERGE Core</source>
-        <translation>CONCIERGE Core</translation>
+        <source>Concierge Core</source>
+        <translation>Concierge Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -981,22 +1321,6 @@ Adresse: %4</translation>
         <translation>0</translation>
     </message>
     <message>
-        <source>All Masternodes</source>
-        <translation>Alle Masternodes</translation>
-    </message>
-    <message>
-        <source>Filter List:</source>
-        <translation>Liste filtern:</translation>
-    </message>
-    <message>
-        <source>Filter masternode list</source>
-        <translation>Masternode-Liste filtern</translation>
-    </message>
-    <message>
-        <source>Node Count:</source>
-        <translation>Anzahl Masternodes:</translation>
-    </message>
-    <message>
         <source>Start alias</source>
         <translation>Starten</translation>
     </message>
@@ -1036,12 +1360,100 @@ Adresse: %4</translation>
 <context>
     <name>MultiSendDialog</name>
     <message>
+        <source>MultiSend</source>
+        <translation>MultiSend</translation>
+    </message>
+    <message>
+        <source>Enter whole numbers 1 - 100</source>
+        <translation>Gebe Ganzzahlen zwischen 1 - 100 ein</translation>
+    </message>
+    <message>
+        <source>Enter Address to Send to</source>
+        <translation>Zieladresse eingeben</translation>
+    </message>
+    <message>
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other Concierge addresses after it matures.
+To Add: enter percentage to give and Concierge address to add to the MultiSend vector.
+To Delete: Enter address to delete and press delete.
+MultiSend will not be activated unless you have clicked Activate</source>
+        <translation>MultiSend ermöglicht es automatisch bis zu 100% Ihrer Stake- oder Masternode-Belohnung zu einer Liste von anderen Concierge-Adressen zu senden.
+Zum hinzufügen: Gebe den Prozentsätze ein, um die Concierge-Adressen des MultiSend-Vektor hinzuzufügen.
+Zum entfernen: Gebe die zu löschende Adresse ein und drücke löschen.
+MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translation>
+    </message>
+    <message>
+        <source>Add to MultiSend Vector</source>
+        <translation>Füge zum MultiSend-Vektor hinzu</translation>
+    </message>
+    <message>
+        <source>Add</source>
+        <translation>Hinzufügen</translation>
+    </message>
+    <message>
+        <source>Deactivate MultiSend</source>
+        <translation>Deaktiviere MultiSend</translation>
+    </message>
+    <message>
+        <source>Deactivate</source>
+        <translation>Deaktivieren</translation>
+    </message>
+    <message>
+        <source>Choose an address from the address book</source>
+        <translation>Wähle eine Adresse aus dem Adressbuch</translation>
+    </message>
+    <message>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
+        <source>Percentage of stake to send</source>
+        <translation>Prozentsatz des Staken zum senden</translation>
+    </message>
+    <message>
+        <source>Percentage:</source>
+        <translation>Prozent:</translation>
+    </message>
+    <message>
+        <source>Address to send portion of stake to</source>
+        <translation>Adresse zum senden Teil des Staken an</translation>
+    </message>
+    <message>
         <source>Address:</source>
         <translation>Adresse:</translation>
+    </message>
+    <message>
+        <source>Delete Address From MultiSend Vector</source>
+        <translation>Lösche Adresse von MultiSend-Vektor</translation>
+    </message>
+    <message>
+        <source>Delete</source>
+        <translation>Löschen</translation>
+    </message>
+    <message>
+        <source>Activate MultiSend</source>
+        <translation>Aktiviere MultiSend</translation>
+    </message>
+    <message>
+        <source>Activate</source>
+        <translation>Aktivieren</translation>
+    </message>
+    <message>
+        <source>View MultiSend Vector</source>
+        <translation>Zeige MultiSend-Vektor</translation>
+    </message>
+    <message>
+        <source>View MultiSend</source>
+        <translation>Zeige MultiSend</translation>
+    </message>
+    <message>
+        <source>The entered address:
+</source>
+        <translation>Die eingegebene Adresse:
+</translation>
+    </message>
+    <message>
+        <source>Removed </source>
+        <translation>Gelöscht</translation>
     </message>
     </context>
 <context>
@@ -1049,9 +1461,41 @@ Adresse: %4</translation>
     </context>
 <context>
     <name>OpenURIDialog</name>
+    <message>
+        <source>Open URI</source>
+        <translation>URI öffnen</translation>
+    </message>
     </context>
 <context>
     <name>OptionsDialog</name>
+    <message>
+        <source>MB</source>
+        <translation>MB</translation>
+    </message>
+    <message>
+        <source>Accept connections from outside</source>
+        <translation>Verbindungen von Aussen zulassen</translation>
+    </message>
+    <message>
+        <source>Allow incoming connections</source>
+        <translation>Eingehende Verbindungen erlauben</translation>
+    </message>
+    <message>
+        <source>&amp;Network</source>
+        <translation>&amp;Netzwerk</translation>
+    </message>
+    <message>
+        <source>&amp;Window</source>
+        <translation>&amp;Fenster</translation>
+    </message>
+    <message>
+        <source>default</source>
+        <translation>standard</translation>
+    </message>
+    <message>
+        <source>none</source>
+        <translation>keine</translation>
+    </message>
     </context>
 <context>
     <name>OverviewPage</name>
@@ -1191,10 +1635,6 @@ Adresse: %4</translation>
         <source>No inputs detected</source>
         <translation>Keine Inputs gefunden</translation>
     </message>
-    <message numerus="yes">
-        <source>%n Rounds</source>
-        <translation><numerusform>%n Runde</numerusform><numerusform>%n Runden</numerusform></translation>
-    </message>
     <message>
         <source>Not enough compatible inputs to anonymize &lt;span style='color:red;'&gt;%1&lt;/span&gt;,&lt;br&gt;will anonymize &lt;span style='color:red;'&gt;%2&lt;/span&gt; instead</source>
         <translation>Nicht genug kompatible Inputs zum Anonymisieren von &lt;span style='color:red;'&gt;%1&lt;/span&gt; gefunden,&lt;br/&gt;&lt;span style='color:red;'&gt;%2&lt;/span&gt; wird stattdessen anonymisiert</translation>
@@ -1210,10 +1650,6 @@ Adresse: %4</translation>
     <message>
         <source>Anonymized</source>
         <translation>Anonymisiert</translation>
-    </message>
-    <message numerus="yes">
-        <source>Denominated inputs have %5 of %n rounds on average</source>
-        <translation><numerusform>Gestückelte Inputs haben im Durchschnitt %5 von %n Runde</numerusform><numerusform>Gestückelte Inputs haben im Durchschnitt %5 von %n Runden</numerusform></translation>
     </message>
     <message>
         <source>Wallet is locked and user declined to unlock. Disabling Obfuscation.</source>
@@ -1269,8 +1705,8 @@ Adresse: %4</translation>
         <translation>Betrag</translation>
     </message>
     <message>
-        <source>Enter a CONCIERGE address (e.g. %1)</source>
-        <translation>CONCIERGE-Adresse eingeben (z.B. %1)</translation>
+        <source>Enter a Concierge address (e.g. %1)</source>
+        <translation>Concierge-Adresse eingeben (z.B. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1456,7 +1892,7 @@ Adresse: %4</translation>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>CCCs überweisen</translation>
+        <translation>LPCs überweisen</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -1619,8 +2055,36 @@ Adresse: %4</translation>
         <translation>Kontostand:</translation>
     </message>
     <message>
+        <source>Copy quantity</source>
+        <translation>Kopiere Anzahl</translation>
+    </message>
+    <message>
         <source>Copy amount</source>
         <translation>Betrag kopieren</translation>
+    </message>
+    <message>
+        <source>Copy fee</source>
+        <translation>Kopiere Gebühr</translation>
+    </message>
+    <message>
+        <source>Copy after fee</source>
+        <translation>Kopiere nach Gebühr</translation>
+    </message>
+    <message>
+        <source>Copy bytes</source>
+        <translation>Kopiere Bytes</translation>
+    </message>
+    <message>
+        <source>Copy priority</source>
+        <translation>Kopiere Priorität</translation>
+    </message>
+    <message>
+        <source>Copy dust</source>
+        <translation>Kopiere Abzug</translation>
+    </message>
+    <message>
+        <source>Copy change</source>
+        <translation>Kopiere Änderung</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -1642,8 +2106,8 @@ Adresse: %4</translation>
         <translation>E&amp;mpfänger:</translation>
     </message>
     <message>
-        <source>The CONCIERGE address to send the payment to</source>
-        <translation>CONCIERGE-Adresse, an die überwiesen werden soll</translation>
+        <source>The Concierge address to send the payment to</source>
+        <translation>Concierge-Adresse, an die überwiesen werden soll</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1682,8 +2146,8 @@ Adresse: %4</translation>
         <translation>Nachricht:</translation>
     </message>
     <message>
-        <source>A message that was attached to the CONCIERGE: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the CONCIERGE network.</source>
-        <translation>Eine an die CONCIERGE-URI angefügte Nachricht, die zusammen mit der Transaktion gespeichert wird. Hinweis: Diese Nachricht wird nicht über das CONCIERGE-Netzwerk gesendet.</translation>
+        <source>A message that was attached to the Concierge: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Concierge network.</source>
+        <translation>Eine an die Concierge-URI angefügte Nachricht, die zusammen mit der Transaktion gespeichert wird. Hinweis: Diese Nachricht wird nicht über das Concierge-Netzwerk gesendet.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -1709,8 +2173,8 @@ Adresse: %4</translation>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>CONCIERGE Core is shutting down...</source>
-        <translation>CONCIERGE Core wird beendet...</translation>
+        <source>Concierge Core is shutting down...</source>
+        <translation>Concierge Core wird beendet...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -1722,6 +2186,10 @@ Adresse: %4</translation>
     <message>
         <source>&amp;Sign Message</source>
         <translation>Nachricht &amp;signieren</translation>
+    </message>
+    <message>
+        <source>The Concierge address to sign the message with</source>
+        <translation>Concierge Adresse mit welcher die Nachricht signiert werden soll</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1744,15 +2212,59 @@ Adresse: %4</translation>
         <translation>Gehen Sie hier die Nachricht ein, die Sie digital unterschreiben möchten</translation>
     </message>
     <message>
+        <source>Copy the current signature to the system clipboard</source>
+        <translation>Kopiert die aktuelle Signatur in den Zwischenspeicher</translation>
+    </message>
+    <message>
+        <source>Sign the message to prove you own this Concierge address</source>
+        <translation>Signiere die Nachricht um zu Beweisen, dass du diese Concierge Adresse besitzt</translation>
+    </message>
+    <message>
+        <source>The Concierge address the message was signed with</source>
+        <translation>Die Concierge Adresse mit welcher die Nachricht signiert wurde.</translation>
+    </message>
+    <message>
+        <source>Verify the message to ensure it was signed with the specified Concierge address</source>
+        <translation>Überprüfen Sie die Nachricht, um sicherzustellen, dass sie mit der angegebenen Concierge-Adresse signiert wurde.</translation>
+    </message>
+    <message>
+        <source>Reset all sign message fields</source>
+        <translation>Setze alle signierten Nachrichten Felder zurück</translation>
+    </message>
+    <message>
         <source>Clear &amp;All</source>
         <translation>&amp;Alles zurücksetzen</translation>
+    </message>
+    <message>
+        <source>Reset all verify message fields</source>
+        <translation>Zurücksetzen aller überprüften Felder.</translation>
+    </message>
+    <message>
+        <source>The entered address is invalid.</source>
+        <translation>Die eingegebene Adresse ist falsch</translation>
+    </message>
+    <message>
+        <source>Please check the address and try again.</source>
+        <translation>Bitte die Adresse prüfen und erneut eingeben</translation>
+    </message>
+    <message>
+        <source>The entered address does not refer to a key.</source>
+        <translation>Die eingegebene Adresse passt nicht zu einem Schlüssel</translation>
+    </message>
+    <message>
+        <source>Wallet unlock was cancelled.</source>
+        <translation>Wallet-Entsperrung wurde abgebrochen.</translation>
+    </message>
+    <message>
+        <source>Private key for the entered address is not available.</source>
+        <translation>Privater Schlüssel für die eingegebene Adresse ist nicht verfügbar</translation>
     </message>
     </context>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>CONCIERGE Core</source>
-        <translation>CONCIERGE Core</translation>
+        <source>Concierge Core</source>
+        <translation>Concierge Core</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -1767,8 +2279,8 @@ Adresse: %4</translation>
         <translation>Die Dash Core Entwickler</translation>
     </message>
     <message>
-        <source>The CONCIERGE Core developers</source>
-        <translation>Die CONCIERGE Core Entwickler</translation>
+        <source>The Concierge Core developers</source>
+        <translation>Die Concierge Core Entwickler</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -1784,10 +2296,6 @@ Adresse: %4</translation>
 </context>
 <context>
     <name>TransactionDesc</name>
-    <message numerus="yes">
-        <source>Open for %n more block(s)</source>
-        <translation><numerusform>Geöffnet für %n weiteren Block</numerusform><numerusform>Geöffnet für %n weitere Blöcke</numerusform></translation>
-    </message>
     <message>
         <source>Open until %1</source>
         <translation>Offen bis %1</translation>
@@ -1848,10 +2356,6 @@ Adresse: %4</translation>
         <source>, has not been successfully broadcast yet</source>
         <translation>, wurde noch nicht erfolgreich übertragen</translation>
     </message>
-    <message numerus="yes">
-        <source>, broadcast through %n node(s)</source>
-        <translation><numerusform>, über %n Knoten übertragen</numerusform><numerusform>, über %n Knoten übertragen</numerusform></translation>
-    </message>
     <message>
         <source>Date</source>
         <translation>Datum</translation>
@@ -1891,10 +2395,6 @@ Adresse: %4</translation>
     <message>
         <source>Credit</source>
         <translation>Gutschrift</translation>
-    </message>
-    <message numerus="yes">
-        <source>matures in %n more block(s)</source>
-        <translation><numerusform>reift noch %n Block</numerusform><numerusform>reift noch %n weitere Blöcke</numerusform></translation>
     </message>
     <message>
         <source>not accepted</source>
@@ -1938,7 +2438,7 @@ Adresse: %4</translation>
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Erzeugte CCCs müssen %1 Blöcke lang reifen, bevor sie ausgegeben werden können. Als Sie diesen Block erzeugten, wurde er an das Netzwerk übertragen, um ihn der Blockkette hinzuzufügen. Falls dies fehlschlägt wird der Status in "nicht angenommen" geändert und Sie werden keine CCCs gutgeschrieben bekommen. Das kann gelegentlich passieren, wenn ein anderer Knoten einen Block fast zeitgleich erzeugt.</translation>
+        <translation>Erzeugte LPCs müssen %1 Blöcke lang reifen, bevor sie ausgegeben werden können. Als Sie diesen Block erzeugten, wurde er an das Netzwerk übertragen, um ihn der Blockkette hinzuzufügen. Falls dies fehlschlägt wird der Status in "nicht angenommen" geändert und Sie werden keine LPCs gutgeschrieben bekommen. Das kann gelegentlich passieren, wenn ein anderer Knoten einen Block fast zeitgleich erzeugt.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -1984,15 +2484,11 @@ Adresse: %4</translation>
     </message>
     <message>
         <source>Type</source>
-        <translation>Typ</translation>
+        <translation>Art</translation>
     </message>
     <message>
         <source>Address</source>
         <translation>Adresse</translation>
-    </message>
-    <message numerus="yes">
-        <source>Open for %n more block(s)</source>
-        <translation><numerusform>Geöffnet für %n weiteren Block</numerusform><numerusform>Geöffnet für %n weitere Blöcke</numerusform></translation>
     </message>
     <message>
         <source>Open until %1</source>
@@ -2304,7 +2800,7 @@ Adresse: %4</translation>
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>CCCs überweisen</translation>
+        <translation>LPCs überweisen</translation>
     </message>
     <message>
         <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 CCC.</source>
@@ -2501,8 +2997,8 @@ Adresse: %4</translation>
         <translation>Wallet gesperrt.</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart CONCIERGE Core to complete</source>
-        <translation>Wallet musste neu geschrieben werden: Bitte CONCIERGE Core neu starten</translation>
+        <source>Wallet needed to be rewritten: restart Concierge Core to complete</source>
+        <translation>Wallet musste neu geschrieben werden: Bitte Concierge Core neu starten</translation>
     </message>
     <message>
         <source>Wallet options:</source>

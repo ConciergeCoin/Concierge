@@ -1,13 +1,13 @@
-CONCIERGE Core
+Concierge Core
 =====================
 
 Setup
 ---------------------
-[CONCIERGE Core](http://concierge.org/wallet) is the original CONCIERGE client and it builds the backbone of the network. However, it downloads and stores the entire history of CONCIERGE transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[Concierge Core](http://concierge.org/wallet) is the original Concierge client and it builds the backbone of the network. However, it downloads and stores the entire history of Concierge transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
-The following are some helpful notes on how to run CONCIERGE on your native platform.
+The following are some helpful notes on how to run Concierge on your native platform.
 
 ### Unix
 
@@ -22,18 +22,18 @@ Unpack the files into a directory, and then run concierge-qt.exe.
 
 ### OSX
 
-Drag CONCIERGE-Qt to your applications folder, and then run CONCIERGE-Qt.
+Drag Concierge-Qt to your applications folder, and then run Concierge-Qt.
 
 ### Need Help?
 
-* See the documentation at the [CONCIERGE Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
+* See the documentation at the [Concierge Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [CONCIERGE Forum](http://forum.concierge.org/).
-* Join one of our Slack groups [CONCIERGE Slack Groups](https://concierge.org/slack-logins/).
+* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [Concierge Forum](http://forum.concierge.org/).
+* Join one of our Slack groups [Concierge Slack Groups](https://concierge.org/slack-logins/).
 
 Building
 ---------------------
-The following are developer notes on how to build CONCIERGE on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Concierge on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OSX Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -41,7 +41,7 @@ The following are developer notes on how to build CONCIERGE on your native platf
 
 Development
 ---------------------
-The Concierge repo's [root README](https://github.com/CONCIERGE-Project/CONCIERGE/blob/master/README.md) contains relevant information on the development process and automated testing.
+The Concierge repo's [root README](https://github.com/Concierge-Project/Concierge/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
@@ -55,8 +55,8 @@ The Concierge repo's [root README](https://github.com/CONCIERGE-Project/CONCIERG
 
 ### Resources
 
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [CONCIERGE](http://forum.concierge.org/) forum.
-* Join the [CONCIERGE-Dev](https://concierge-dev.slack.com/) Slack group ([Sign-Up](https://concierge-dev.herokuapp.com/)).
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [Concierge](http://forum.concierge.org/) forum.
+* Join the [Concierge-Dev](https://concierge-dev.slack.com/) Slack group ([Sign-Up](https://concierge-dev.herokuapp.com/)).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

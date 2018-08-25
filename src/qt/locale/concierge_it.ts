@@ -3,7 +3,7 @@
     <name>AddressBookPage</name>
     <message>
         <source>Right-click to edit address or label</source>
-        <translation>Clic col pulsante destro per modificare l'indirizzo o l'etichetta</translation>
+        <translation>Fare click col pulsante destro per modificare l'indirizzo o l'etichetta</translation>
     </message>
     <message>
         <source>Create a new address</source>
@@ -62,12 +62,12 @@
         <translation>Indirizzi di ricezione</translation>
     </message>
     <message>
-        <source>These are your CONCIERGE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Questi sono gli indirizzi CONCIERGE per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo di ricezione prima di inviare valuta.</translation>
+        <source>These are your Concierge addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Questi sono gli indirizzi Concierge per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo di ricezione prima di inviare valuta.</translation>
     </message>
     <message>
-        <source>These are your CONCIERGE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Questi sono gli indirizzi CONCIERGE per la ricezione di pagamenti. Si raccomanda di utilizzare un indirizzo diverso per ogni transazione.</translation>
+        <source>These are your Concierge addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Questi sono gli indirizzi Concierge per la ricezione di pagamenti. Si raccomanda di utilizzare un indirizzo diverso per ogni transazione.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Conferma cifratura portafoglio</translation>
     </message>
     <message>
-        <source>CONCIERGE will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CCCs from being stolen by malware infecting your computer.</source>
-        <translation>CONCIERGE verrà ora chiuso per completare il processo di cifratura. Ricorda che crittografare il tuo portafoglio non protegge completamente i tuoi CCC dal furto da parte di software malevoli che potrebbero infettare il tuo computer.</translation>
+        <source>Concierge will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your LPCs from being stolen by malware infecting your computer.</source>
+        <translation>Concierge verrà ora chiuso per completare il processo di cifratura. Ricorda che crittografare il tuo portafoglio non protegge completamente i tuoi CCC dal furto da parte di software malevoli che potrebbero infettare il tuo computer.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -247,8 +247,8 @@
         <translation>Indirizzo:</translation>
     </message>
     <message>
-        <source>The CONCIERGE address to sign the message with</source>
-        <translation>L'indirizzo CONCIERGE per firmare il messaggio con</translation>
+        <source>The Concierge address to sign the message with</source>
+        <translation>L'indirizzo Concierge per firmare il messaggio con</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -279,8 +279,8 @@
         <translation>Copiare la firma corrente negli Appunti di sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CONCIERGE address</source>
-        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo CONCIERGE</translation>
+        <source>Sign the message to prove you own this Concierge address</source>
+        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo Concierge</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -295,16 +295,20 @@
         <translation>Cancella &amp;All</translation>
     </message>
     <message>
+        <source>&amp;BIP 38 Decrypt</source>
+        <translation>&amp;BIP 38 Decripta</translation>
+    </message>
+    <message>
         <source>Enter the BIP 38 encrypted private key. Enter the passphrase in the middle box. Click Decrypt Key to compute the private key. After the key is decrypted, clicking 'Import Address' will add this private key to the wallet.</source>
         <translation>Immettere la chiave privata codificata BIP 38. Inserire la passphrase nella casella centrale. Fare clic su Decripta Chiave per calcolare la chiave privata. Dopo che la chiave viene decrittata, cliccando su "Importa indirizzo" verrà aggiunta questa chiave privata al portafoglio.</translation>
     </message>
     <message>
-        <source>The CONCIERGE address the message was signed with</source>
-        <translation>L'indirizzo CONCIERGE con cui è stato firmato il messaggio</translation>
+        <source>The Concierge address the message was signed with</source>
+        <translation>L'indirizzo Concierge con cui è stato firmato il messaggio</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified CONCIERGE address</source>
-        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo CONCIERGE specificato </translation>
+        <source>Verify the message to ensure it was signed with the specified Concierge address</source>
+        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo Concierge specificato </translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -411,7 +415,7 @@
     </message>
     <message>
         <source>&amp;Receive</source>
-        <translation>Ri&amp;cevi</translation>
+        <translation>&amp;Ricevi</translation>
     </message>
     <message>
         <source>&amp;Transactions</source>
@@ -546,28 +550,52 @@
         <translation>Mostra i backup dei portafogli creati automaticamente</translation>
     </message>
     <message>
+        <source>&amp;Sending addresses...</source>
+        <translation>&amp;Indirizzi Sorgente</translation>
+    </message>
+    <message>
         <source>Show the list of used sending addresses and labels</source>
         <translation>Mostra l'elenco degli indirizzi e delle etichette di invio utilizzati</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>&amp;Indirizzi di Destinazione</translation>
     </message>
     <message>
         <source>Show the list of used receiving addresses and labels</source>
         <translation>Mostra l'elenco degli indirizzi e delle etichette di ricezione utilizzati</translation>
     </message>
-    <message numerus="yes">
-        <source>Processed %n blocks of transaction history.</source>
-        <translation><numerusform>Processato %n blocchi nella cronologia delle transazioni.</numerusform><numerusform>Processato %n blocchi nella cronologia delle transazioni.</numerusform></translation>
+    <message>
+        <source>Open &amp;URI...</source>
+        <translation>Apri URL</translation>
+    </message>
+    <message>
+        <source>Synchronizing additional data: %p%</source>
+        <translation>Sincronizzazione dati addizionali: %p%</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;Impostazioni</translation>
+    </message>
+    <message>
+        <source>&amp;Tools</source>
+        <translation>&amp;Strumenti</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Aiuto</translation>
     </message>
     <message>
         <source>Tabs toolbar</source>
         <translation>Schede degli strumenti</translation>
     </message>
     <message>
-        <source>CONCIERGE Core</source>
-        <translation>CONCIERGE Core</translation>
+        <source>Concierge Core</source>
+        <translation>Concierge Core</translation>
     </message>
     <message>
-        <source>Send coins to a CONCIERGE address</source>
-        <translation>Invia monete all' indirizzo CONCIERGE</translation>
+        <source>Send coins to a Concierge address</source>
+        <translation>Invia monete all' indirizzo Concierge</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and concierge: URIs)</source>
@@ -582,20 +610,24 @@
         <translation>Esplora i masternodes</translation>
     </message>
     <message>
-        <source>Show information about CONCIERGE Core</source>
-        <translation>Visualizza informazioni su CONCIERGE Core</translation>
+        <source>&amp;About Concierge Core</source>
+        <translation>&amp;Informazioni Concierge Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for CONCIERGE</source>
-        <translation>Modifica le opzioni di configurazione per CONCIERGE</translation>
+        <source>Show information about Concierge Core</source>
+        <translation>Visualizza informazioni su Concierge Core</translation>
     </message>
     <message>
-        <source>Sign messages with your CONCIERGE addresses to prove you own them</source>
-        <translation>Firma i messaggi con i tuoi indirizzi CONCIERGE per dimostrare di essere il proprietario </translation>
+        <source>Modify configuration options for Concierge</source>
+        <translation>Modifica le opzioni di configurazione per Concierge</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified CONCIERGE addresses</source>
-        <translation>Verifica i messaggi per assicurarsi che siano stati firmati con indirizzi CONCIERGE specifici</translation>
+        <source>Sign messages with your Concierge addresses to prove you own them</source>
+        <translation>Firma i messaggi con i tuoi indirizzi Concierge per dimostrare di essere il proprietario </translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Concierge addresses</source>
+        <translation>Verifica i messaggi per assicurarsi che siano stati firmati con indirizzi Concierge specifici</translation>
     </message>
     <message>
         <source>Encrypt and decrypt private keys using a passphrase</source>
@@ -606,16 +638,16 @@
         <translation>Impostazioni MultiSend</translation>
     </message>
     <message>
-        <source>Open a CONCIERGE: URI or payment request</source>
-        <translation>Apri un CONCIERGE: URI o richiesta di pagamento</translation>
+        <source>Open a Concierge: URI or payment request</source>
+        <translation>Apri un Concierge: URI o richiesta di pagamento</translation>
     </message>
     <message>
         <source>Block explorer window</source>
         <translation>Finestra Block Explorer</translation>
     </message>
     <message>
-        <source>Show the CONCIERGE Core help message to get a list with possible CONCIERGE command-line options</source>
-        <translation>Mostra il messaggio di aiuto CONCIERGE Core per ottenere un elenco con le possibili opzioni di riga di comando CONCIERGE</translation>
+        <source>Show the Concierge Core help message to get a list with possible Concierge command-line options</source>
+        <translation>Mostra il messaggio di aiuto Concierge Core per ottenere un elenco con le possibili opzioni di riga di comando Concierge</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -654,6 +686,10 @@
         <translation>Avvertimento</translation>
     </message>
     <message>
+        <source>Information</source>
+        <translation>Informazioni</translation>
+    </message>
+    <message>
         <source>Sent transaction</source>
         <translation>Transazioni Inviate</translation>
     </message>
@@ -664,6 +700,18 @@
     <message>
         <source>Sent MultiSend transaction</source>
         <translation>Transazioni MultiSend inviate</translation>
+    </message>
+    <message>
+        <source>Date: %1
+Amount: %2
+Type: %3
+Address: %4
+</source>
+        <translation>Data: %1
+Ammontare: %2
+Tipo: %3
+Indirizzo: %4
+</translation>
     </message>
     <message>
         <source>Staking is active
@@ -693,15 +741,120 @@ MultiSend: %1</translation>
 <context>
     <name>BlockExplorer</name>
     <message>
+        <source>Blockchain Explorer</source>
+        <translation>Esplora catena dei blocchi</translation>
+    </message>
+    <message>
+        <source>Address / Block / Transaction</source>
+        <translation>Indirizzo / Blocco / Transazione</translation>
+    </message>
+    <message>
         <source>Search</source>
         <translation>Cerca</translation>
     </message>
-    </context>
+    <message>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (concierge.conf).</source>
+        <translation>Non tutte le transazioni verranno visualizzate. Per vedere tutte le transazioni è necessario aggiungere txindex=1 nel file di configurazione (concierge.conf)</translation>
+    </message>
+</context>
 <context>
     <name>ClientModel</name>
     </context>
 <context>
     <name>CoinControlDialog</name>
+    <message>
+        <source>Quantity:</source>
+        <translation>Quantità:</translation>
+    </message>
+    <message>
+        <source>Amount:</source>
+        <translation>Totale:</translation>
+    </message>
+    <message>
+        <source>Priority:</source>
+        <translation>Priorità:</translation>
+    </message>
+    <message>
+        <source>Fee:</source>
+        <translation>Tassa:</translation>
+    </message>
+    <message>
+        <source>Change:</source>
+        <translation>Differenza:</translation>
+    </message>
+    <message>
+        <source>Tree mode</source>
+        <translation>Modalità albero</translation>
+    </message>
+    <message>
+        <source>List mode</source>
+        <translation>Modalità lista</translation>
+    </message>
+    <message>
+        <source>Amount</source>
+        <translation>Ammontare</translation>
+    </message>
+    <message>
+        <source>Received with label</source>
+        <translation>Ricevute con etichetta</translation>
+    </message>
+    <message>
+        <source>Received with address</source>
+        <translation>Ricevute con indirizzo</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation>Data</translation>
+    </message>
+    <message>
+        <source>Confirmations</source>
+        <translation>Conferme</translation>
+    </message>
+    <message>
+        <source>Confirmed</source>
+        <translation>Confermata</translation>
+    </message>
+    <message>
+        <source>Priority</source>
+        <translation>Priorità</translation>
+    </message>
+    <message>
+        <source>Copy address</source>
+        <translation>Copia indirizzo</translation>
+    </message>
+    <message>
+        <source>Copy label</source>
+        <translation>Copia etichetta</translation>
+    </message>
+    <message>
+        <source>Copy amount</source>
+        <translation>Copia ammontare</translation>
+    </message>
+    <message>
+        <source>Copy transaction ID</source>
+        <translation>Copia ID transazione</translation>
+    </message>
+    <message>
+        <source>Please switch to "List mode" to use this function.</source>
+        <translation>Prego selezionare "Modalità lista" per utilizzare questa funzione</translation>
+    </message>
+    <message>
+        <source>n/a</source>
+        <translation>n/a</translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation>si
+</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>no</translation>
+    </message>
+    <message>
+        <source>This label turns red, if the transaction size is greater than 1000 bytes.</source>
+        <translation>Questa etichetta diventerà rossa se la transazione supera i 1000 bytes</translation>
+    </message>
     <message>
         <source>(no label)</source>
         <translation>(nessuna etichetta)</translation>
@@ -709,22 +862,66 @@ MultiSend: %1</translation>
     </context>
 <context>
     <name>EditAddressDialog</name>
+    <message>
+        <source>Edit Address</source>
+        <translation>Modifica indirizzo</translation>
+    </message>
+    <message>
+        <source>&amp;Label</source>
+        <translation>&amp;Etichetta</translation>
+    </message>
+    <message>
+        <source>&amp;Address</source>
+        <translation>&amp;Indirizzo</translation>
+    </message>
+    <message>
+        <source>Could not unlock wallet.</source>
+        <translation>Impossibile sbloccare il portafoglio</translation>
+    </message>
     </context>
 <context>
     <name>FreespaceChecker</name>
+    <message>
+        <source>name</source>
+        <translation>nome</translation>
+    </message>
     </context>
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>CONCIERGE Core</source>
-        <translation>CONCIERGE Core</translation>
+        <source>version</source>
+        <translation>versione</translation>
+    </message>
+    <message>
+        <source>Concierge Core</source>
+        <translation>Concierge Core</translation>
+    </message>
+    <message>
+        <source>(%1-bit)</source>
+        <translation>(%1-bit)</translation>
+    </message>
+    <message>
+        <source>Command-line options</source>
+        <translation>Opzioni linea di comando</translation>
+    </message>
+    <message>
+        <source>Usage:</source>
+        <translation>Utilizzo:</translation>
+    </message>
+    <message>
+        <source>command-line options</source>
+        <translation>opzioni linea di comando</translation>
     </message>
     </context>
 <context>
     <name>Intro</name>
     <message>
-        <source>CONCIERGE Core</source>
-        <translation>CONCIERGE Core</translation>
+        <source>Welcome</source>
+        <translation>Benvenuto</translation>
+    </message>
+    <message>
+        <source>Concierge Core</source>
+        <translation>Concierge Core</translation>
     </message>
     <message>
         <source>Error</source>
@@ -733,6 +930,10 @@ MultiSend: %1</translation>
     </context>
 <context>
     <name>MasternodeList</name>
+    <message>
+        <source>My Masternodes</source>
+        <translation>I miei Masternodes</translation>
+    </message>
     <message>
         <source>Address</source>
         <translation>Indirizzo</translation>
@@ -764,6 +965,10 @@ MultiSend: %1</translation>
     </context>
 <context>
     <name>OverviewPage</name>
+    <message>
+        <source>n/a</source>
+        <translation>n/a</translation>
+    </message>
     </context>
 <context>
     <name>PaymentServer</name>
@@ -773,6 +978,10 @@ MultiSend: %1</translation>
     </context>
 <context>
     <name>QObject</name>
+    <message>
+        <source>Amount</source>
+        <translation>Ammontare</translation>
+    </message>
     </context>
 <context>
     <name>QRImageWidget</name>
@@ -786,12 +995,24 @@ MultiSend: %1</translation>
     </context>
 <context>
     <name>ReceiveCoinsDialog</name>
-    </context>
+    <message>
+        <source>Copy label</source>
+        <translation>Copia etichetta</translation>
+    </message>
+    <message>
+        <source>Copy amount</source>
+        <translation>Copia ammontare</translation>
+    </message>
+</context>
 <context>
     <name>ReceiveRequestDialog</name>
     <message>
         <source>Address</source>
         <translation>Indirizzo</translation>
+    </message>
+    <message>
+        <source>Amount</source>
+        <translation>Ammontare</translation>
     </message>
     <message>
         <source>Label</source>
@@ -801,8 +1022,16 @@ MultiSend: %1</translation>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
+        <source>Date</source>
+        <translation>Data</translation>
+    </message>
+    <message>
         <source>Label</source>
         <translation>Etichetta</translation>
+    </message>
+    <message>
+        <source>Amount</source>
+        <translation>Ammontare</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -812,8 +1041,36 @@ MultiSend: %1</translation>
 <context>
     <name>SendCoinsDialog</name>
     <message>
+        <source>Quantity:</source>
+        <translation>Quantità:</translation>
+    </message>
+    <message>
+        <source>Amount:</source>
+        <translation>Totale:</translation>
+    </message>
+    <message>
+        <source>Priority:</source>
+        <translation>Priorità:</translation>
+    </message>
+    <message>
+        <source>Fee:</source>
+        <translation>Tassa:</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>no</translation>
+    </message>
+    <message>
+        <source>Change:</source>
+        <translation>Differenza:</translation>
+    </message>
+    <message>
         <source>Clear &amp;All</source>
         <translation>Cancella &amp;All</translation>
+    </message>
+    <message>
+        <source>Copy amount</source>
+        <translation>Copia ammontare</translation>
     </message>
     <message>
         <source>anonymous funds</source>
@@ -849,8 +1106,8 @@ MultiSend: %1</translation>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The CONCIERGE address to sign the message with</source>
-        <translation>L'indirizzo CONCIERGE per firmare il messaggio con</translation>
+        <source>The Concierge address to sign the message with</source>
+        <translation>L'indirizzo Concierge per firmare il messaggio con</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -873,16 +1130,16 @@ MultiSend: %1</translation>
         <translation>Copiare la firma corrente negli Appunti di sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CONCIERGE address</source>
-        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo CONCIERGE</translation>
+        <source>Sign the message to prove you own this Concierge address</source>
+        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo Concierge</translation>
     </message>
     <message>
-        <source>The CONCIERGE address the message was signed with</source>
-        <translation>L'indirizzo CONCIERGE con cui è stato firmato il messaggio</translation>
+        <source>The Concierge address the message was signed with</source>
+        <translation>L'indirizzo Concierge con cui è stato firmato il messaggio</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified CONCIERGE address</source>
-        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo specificato CONCIERGE</translation>
+        <source>Verify the message to ensure it was signed with the specified Concierge address</source>
+        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo Concierge specificato </translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -902,7 +1159,7 @@ MultiSend: %1</translation>
     </message>
     <message>
         <source>Please check the address and try again.</source>
-        <translation>Controllare l'indirizzo e riprovare.</translation>
+        <translation>Per favore controlla l'indirizzo e riprova.</translation>
     </message>
     <message>
         <source>The entered address does not refer to a key.</source>
@@ -920,8 +1177,8 @@ MultiSend: %1</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>CONCIERGE Core</source>
-        <translation>CONCIERGE Core</translation>
+        <source>Concierge Core</source>
+        <translation>Concierge Core</translation>
     </message>
     </context>
 <context>
@@ -929,12 +1186,24 @@ MultiSend: %1</translation>
     </context>
 <context>
     <name>TransactionDesc</name>
+    <message>
+        <source>Date</source>
+        <translation>Data</translation>
+    </message>
+    <message>
+        <source>Amount</source>
+        <translation>Ammontare</translation>
+    </message>
     </context>
 <context>
     <name>TransactionDescDialog</name>
     </context>
 <context>
     <name>TransactionTableModel</name>
+    <message>
+        <source>Date</source>
+        <translation>Data</translation>
+    </message>
     <message>
         <source>Address</source>
         <translation>Indirizzo</translation>
@@ -943,8 +1212,32 @@ MultiSend: %1</translation>
 <context>
     <name>TransactionView</name>
     <message>
+        <source>Copy address</source>
+        <translation>Copia indirizzo</translation>
+    </message>
+    <message>
+        <source>Copy label</source>
+        <translation>Copia etichetta</translation>
+    </message>
+    <message>
+        <source>Copy amount</source>
+        <translation>Copia ammontare</translation>
+    </message>
+    <message>
+        <source>Copy transaction ID</source>
+        <translation>Copia ID transazione</translation>
+    </message>
+    <message>
         <source>Comma separated file (*.csv)</source>
         <translation>File separato da virgola (*.csv)</translation>
+    </message>
+    <message>
+        <source>Confirmed</source>
+        <translation>Confermata</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation>Data</translation>
     </message>
     <message>
         <source>Label</source>
@@ -984,6 +1277,10 @@ MultiSend: %1</translation>
     <message>
         <source>Error</source>
         <translation>Errore</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>Informazioni</translation>
     </message>
     <message>
         <source>Warning</source>

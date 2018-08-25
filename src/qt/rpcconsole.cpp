@@ -1,6 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The CONCIERGE developers
+// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2018 The Concierge developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -30,6 +31,7 @@
 #include <QScrollBar>
 #include <QThread>
 #include <QTime>
+#include <QStringList>
 
 #if QT_VERSION < 0x050000
 #include <QUrl>
@@ -248,9 +250,7 @@ RPCConsole::RPCConsole(QWidget* parent) : QDialog(parent),
     ui->openSSLVersion->setText(SSLeay_version(SSLEAY_VERSION));
 #ifdef ENABLE_WALLET
     ui->berkeleyDBVersion->setText(DbEnv::version(0, 0, 0));
-    std::string walletPath = QString(tr("Wallet in use: ")).toStdString() + GetDataDir().string();
-    walletPath += QDir::separator().toLatin1() + GetArg("-wallet", "wallet.dat");
-    ui->wallet_path->setText(QString::fromStdString(walletPath));
+    ui->wallet_path->setText(QString::fromStdString(GetDataDir().string() + QDir::separator().toLatin1() + GetArg("-wallet", "wallet.dat")));
 #else
     ui->label_berkeleyDBVersion->hide();
     ui->berkeleyDBVersion->hide();
@@ -295,6 +295,14 @@ bool RPCConsole::eventFilter(QObject* obj, QEvent* event)
         case Qt::Key_PageDown:
             if (obj == ui->lineEdit) {
                 QApplication::postEvent(ui->messagesWidget, new QKeyEvent(*keyevt));
+                return true;
+            }
+            break;
+        case Qt::Key_Return:
+        case Qt::Key_Enter:
+            // forward these events to lineEdit
+            if(obj == autoCompleter->popup()) {
+                QApplication::postEvent(ui->lineEdit, new QKeyEvent(*keyevt));
                 return true;
             }
             break;
@@ -351,8 +359,21 @@ void RPCConsole::setClientModel(ClientModel* model)
         ui->clientName->setText(model->clientName());
         ui->buildDate->setText(model->formatBuildDate());
         ui->startupTime->setText(model->formatClientStartupTime());
-
         ui->networkName->setText(QString::fromStdString(Params().NetworkIDString()));
+
+        //Setup autocomplete and attach it
+        QStringList wordList;
+        std::vector<std::string> commandList = tableRPC.listCommands();
+        for (size_t i = 0; i < commandList.size(); ++i)
+        {
+            wordList << commandList[i].c_str();
+        }
+
+        autoCompleter = new QCompleter(wordList, this);
+        ui->lineEdit->setCompleter(autoCompleter);
+
+        // clear the lineEdit after activating from QCompleter
+        autoCompleter->popup()->installEventFilter(this);
     }
 }
 
@@ -457,7 +478,7 @@ void RPCConsole::clear()
         "td.cmd-error { color: red; } "
         "b { color: #006060; } ");
 
-    message(CMD_REPLY, (tr("Welcome to the CONCIERGE RPC console.") + "<br>" +
+    message(CMD_REPLY, (tr("Welcome to the Concierge RPC console.") + "<br>" +
                            tr("Use up and down arrows to navigate history, and <b>Ctrl-L</b> to clear screen.") + "<br>" +
                            tr("Type <b>help</b> for an overview of available commands.")),
         true);

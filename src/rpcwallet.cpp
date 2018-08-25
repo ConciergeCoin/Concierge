@@ -1,7 +1,8 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The CONCIERGE developers
+// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2018 The Concierge developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -81,7 +82,7 @@ Value getnewaddress(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "getnewaddress ( \"account\" )\n"
-            "\nReturns a new CONCIERGE address for receiving payments.\n"
+            "\nReturns a new Concierge address for receiving payments.\n"
             "If 'account' is specified (recommended), it is added to the address book \n"
             "so payments received with the address will be credited to 'account'.\n"
             "\nArguments:\n"
@@ -150,7 +151,7 @@ Value getaccountaddress(const Array& params, bool fHelp)
     if (fHelp || params.size() != 1)
         throw runtime_error(
             "getaccountaddress \"account\"\n"
-            "\nReturns the current CONCIERGE address for receiving payments to this account.\n"
+            "\nReturns the current Concierge address for receiving payments to this account.\n"
             "\nArguments:\n"
             "1. \"account\"       (string, required) The account name for the address. It can also be set to the empty string \"\" to represent the default account. The account does not need to exist, it will be created and a new address created  if there is no account by the given name.\n"
             "\nResult:\n"
@@ -174,7 +175,7 @@ Value getrawchangeaddress(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "getrawchangeaddress\n"
-            "\nReturns a new CONCIERGE address, for receiving change.\n"
+            "\nReturns a new Concierge address, for receiving change.\n"
             "This is for use with raw transactions, NOT normal use.\n"
             "\nResult:\n"
             "\"address\"    (string) The address\n"
@@ -211,7 +212,7 @@ Value setaccount(const Array& params, bool fHelp)
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid CONCIERGE address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Concierge address");
 
 
     string strAccount;
@@ -249,7 +250,7 @@ Value getaccount(const Array& params, bool fHelp)
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid CONCIERGE address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Concierge address");
 
     string strAccount;
     map<CTxDestination, CAddressBookData>::iterator mi = pwalletMain->mapAddressBook.find(address.Get());
@@ -304,7 +305,7 @@ void SendMoney(const CTxDestination& address, CAmount nValue, CWalletTx& wtxNew,
         throw JSONRPCError(RPC_WALLET_ERROR, strError);
     }
 
-    // Parse CONCIERGE address
+    // Parse Concierge address
     CScript scriptPubKey = GetScriptForDestination(address);
 
     // Create and send the transaction
@@ -342,7 +343,7 @@ Value sendtoaddress(const Array& params, bool fHelp)
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid CONCIERGE address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Concierge address");
 
     // Amount
     CAmount nAmount = AmountFromValue(params[1]);
@@ -383,7 +384,7 @@ Value sendtoaddressix(const Array& params, bool fHelp)
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid CONCIERGE address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Concierge address");
 
     // Amount
     CAmount nAmount = AmountFromValue(params[1]);
@@ -512,7 +513,7 @@ Value getreceivedbyaddress(const Array& params, bool fHelp)
     // concierge address
     CBitcoinAddress address = CBitcoinAddress(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid CONCIERGE address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Concierge address");
     CScript scriptPubKey = GetScriptForDestination(address.Get());
     if (!IsMine(*pwalletMain, scriptPubKey))
         return (double)0.0;
@@ -784,7 +785,7 @@ Value sendfrom(const Array& params, bool fHelp)
     string strAccount = AccountFromValue(params[0]);
     CBitcoinAddress address(params[1].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid CONCIERGE address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Concierge address");
     CAmount nAmount = AmountFromValue(params[2]);
     int nMinDepth = 1;
     if (params.size() > 3)
@@ -853,7 +854,7 @@ Value sendmany(const Array& params, bool fHelp)
     BOOST_FOREACH (const Pair& s, sendTo) {
         CBitcoinAddress address(s.name_);
         if (!address.IsValid())
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid CONCIERGE address: ") + s.name_);
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid Concierge address: ") + s.name_);
 
         if (setAddress.count(address))
             throw JSONRPCError(RPC_INVALID_PARAMETER, string("Invalid parameter, duplicated address: ") + s.name_);
@@ -894,7 +895,7 @@ Value addmultisigaddress(const Array& params, bool fHelp)
     if (fHelp || params.size() < 2 || params.size() > 3) {
         string msg = "addmultisigaddress nrequired [\"key\",...] ( \"account\" )\n"
                      "\nAdd a nrequired-to-sign multisignature address to the wallet.\n"
-                     "Each key is a CONCIERGE address or hex-encoded public key.\n"
+                     "Each key is a Concierge address or hex-encoded public key.\n"
                      "If 'account' is specified, assign address to that account.\n"
 
                      "\nArguments:\n"
@@ -1588,6 +1589,7 @@ static void LockWallet(CWallet* pWallet)
 {
     LOCK(cs_nWalletUnlockTime);
     nWalletUnlockTime = 0;
+    pWallet->fWalletUnlockAnonymizeOnly = false;
     pWallet->Lock();
 }
 
@@ -1597,14 +1599,14 @@ Value walletpassphrase(const Array& params, bool fHelp)
         throw runtime_error(
             "walletpassphrase \"passphrase\" timeout ( anonymizeonly )\n"
             "\nStores the wallet decryption key in memory for 'timeout' seconds.\n"
-            "This is needed prior to performing transactions related to private keys such as sending CCCs\n"
+            "This is needed prior to performing transactions related to private keys such as sending LPCs\n"
             "\nArguments:\n"
             "1. \"passphrase\"     (string, required) The wallet passphrase\n"
             "2. timeout            (numeric, required) The time to keep the decryption key in seconds.\n"
             "3. anonymizeonly      (boolean, optional, default=flase) If is true sending functions are disabled."
             "\nNote:\n"
             "Issuing the walletpassphrase command while the wallet is already unlocked will set a new unlock\n"
-            "time that overrides the old one.\n"
+            "time that overrides the old one. A timeout of \"0\" unlocks until the wallet is closed.\n"
             "\nExamples:\n"
             "\nUnlock the wallet for 60 seconds\n" +
             HelpExampleCli("walletpassphrase", "\"my pass phrase\" 60") +
@@ -1639,7 +1641,11 @@ Value walletpassphrase(const Array& params, bool fHelp)
     int64_t nSleepTime = params[1].get_int64();
     LOCK(cs_nWalletUnlockTime);
     nWalletUnlockTime = GetTime() + nSleepTime;
-    RPCRunLater("lockwallet", boost::bind(LockWallet, pwalletMain), nSleepTime);
+
+    if (nSleepTime > 0) {
+        nWalletUnlockTime = GetTime () + nSleepTime;
+        RPCRunLater ("lockwallet", boost::bind (LockWallet, pwalletMain), nSleepTime);
+    }
 
     return Value::null;
 }
@@ -1730,7 +1736,7 @@ Value encryptwallet(const Array& params, bool fHelp)
             "\nExamples:\n"
             "\nEncrypt you wallet\n" +
             HelpExampleCli("encryptwallet", "\"my pass phrase\"") +
-            "\nNow set the passphrase to use the wallet, such as for signing or sending CCCs\n" + HelpExampleCli("walletpassphrase", "\"my pass phrase\"") +
+            "\nNow set the passphrase to use the wallet, such as for signing or sending LPCs\n" + HelpExampleCli("walletpassphrase", "\"my pass phrase\"") +
             "\nNow we can so something like sign\n" + HelpExampleCli("signmessage", "\"conciergeaddress\" \"test message\"") +
             "\nNow lock the wallet again by removing the passphrase\n" + HelpExampleCli("walletlock", "") +
             "\nAs a json rpc call\n" + HelpExampleRpc("encryptwallet", "\"my pass phrase\""));
@@ -1768,7 +1774,7 @@ Value lockunspent(const Array& params, bool fHelp)
             "lockunspent unlock [{\"txid\":\"txid\",\"vout\":n},...]\n"
             "\nUpdates list of temporarily unspendable outputs.\n"
             "Temporarily lock (unlock=false) or unlock (unlock=true) specified transaction outputs.\n"
-            "A locked transaction output will not be chosen by automatic coin selection, when spending CCCs.\n"
+            "A locked transaction output will not be chosen by automatic coin selection, when spending LPCs.\n"
             "Locks are stored in memory only. Nodes start with zero locked outputs, and the locked output list\n"
             "is always cleared (by virtue of process exit) when a node stops or fails.\n"
             "Also see the listunspent call\n"
@@ -1929,18 +1935,27 @@ Value reservebalance(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() > 2)
         throw runtime_error(
-            "reservebalance [<reserve> [amount]]\n"
-            "<reserve> is true or false to turn balance reserve on or off.\n"
-            "<amount> is a real and rounded to cent.\n"
-            "Set reserve amount not participating in network protection.\n"
-            "If no parameters provided current setting is printed.\n");
+            "reservebalance ( reserve amount )\n"
+            "\nShow or set the reserve amount not participating in network protection\n"
+            "If no parameters provided current setting is printed.\n"
+
+            "\nArguments:\n"
+            "1. reserve     (boolean, optional) is true or false to turn balance reserve on or off.\n"
+            "2. amount      (numeric, optional) is a real and rounded to cent.\n"
+
+            "\nResult:\n"
+            "{\n"
+            "  \"reserve\": true|false,     (boolean) Status of the reserve balance\n"
+            "  \"amount\": x.xxxx       (numeric) Amount reserved\n"
+            "\nExamples:\n" +
+            HelpExampleCli("reservebalance", "true 5000") + HelpExampleRpc("reservebalance", "true 5000"));
 
     if (params.size() > 0) {
         bool fReserve = params[0].get_bool();
         if (fReserve) {
             if (params.size() == 1)
                 throw runtime_error("must provide amount to reserve balance.\n");
-            int64_t nAmount = AmountFromValue(params[1]);
+            CAmount nAmount = AmountFromValue(params[1]);
             nAmount = (nAmount / CENT) * CENT; // round to cent
             if (nAmount < 0)
                 throw runtime_error("amount cannot be negative.\n");
@@ -1963,13 +1978,24 @@ Value setstakesplitthreshold(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "setstakesplitthreshold <1 - 999,999>\n"
-            "This will set the output size of your stakes to never be below this number\n");
+            "setstakesplitthreshold value\n"
+            "\nThis will set the output size of your stakes to never be below this number\n"
+
+            "\nArguments:\n"
+            "1. value   (numeric, required) Threshold value between 1 and 999999\n"
+            "\nResult:\n"
+            "{\n"
+            "  \"threshold\": n,    (numeric) Threshold value set\n"
+            "  \"saved\": true|false    (boolean) 'true' if successfully saved to the wallet file\n"
+            "}\n"
+            "\nExamples:\n" +
+            HelpExampleCli("setstakesplitthreshold", "5000") + HelpExampleRpc("setstakesplitthreshold", "5000"));
+
     uint64_t nStakeSplitThreshold = params[0].get_int();
     if (pwalletMain->IsLocked())
         throw JSONRPCError(RPC_WALLET_UNLOCK_NEEDED, "Error: Unlock wallet to use this feature");
     if (nStakeSplitThreshold > 999999)
-        return "out of range - setting split threshold failed";
+        throw runtime_error("Value out of range, max allowed is 999999");
 
     CWalletDB walletdb(pwalletMain->strWalletFile);
     LOCK(pwalletMain->cs_wallet);
@@ -1978,12 +2004,12 @@ Value setstakesplitthreshold(const Array& params, bool fHelp)
 
         Object result;
         pwalletMain->nStakeSplitThreshold = nStakeSplitThreshold;
-        result.push_back(Pair("split stake threshold set to ", int(pwalletMain->nStakeSplitThreshold)));
+        result.push_back(Pair("threshold", int(pwalletMain->nStakeSplitThreshold)));
         if (fFileBacked) {
             walletdb.WriteStakeSplitThreshold(nStakeSplitThreshold);
-            result.push_back(Pair("saved to wallet.dat ", "true"));
+            result.push_back(Pair("saved", "true"));
         } else
-            result.push_back(Pair("saved to wallet.dat ", "false"));
+            result.push_back(Pair("saved", "false"));
 
         return result;
     }
@@ -1995,31 +2021,38 @@ Value getstakesplitthreshold(const Array& params, bool fHelp)
     if (fHelp || params.size() != 0)
         throw runtime_error(
             "getstakesplitthreshold\n"
-            "Returns the set splitstakethreshold\n");
+            "Returns the threshold for stake splitting\n"
+            "\nResult:\n"
+            "n      (numeric) Threshold value\n"
+            "\nExamples:\n" +
+            HelpExampleCli("getstakesplitthreshold", "") + HelpExampleRpc("getstakesplitthreshold", ""));
 
-    Object result;
-    result.push_back(Pair("split stake threshold set to ", int(pwalletMain->nStakeSplitThreshold)));
-    return result;
+    return int(pwalletMain->nStakeSplitThreshold);
 }
 
 Value autocombinerewards(const Array& params, bool fHelp)
 {
-    if (fHelp || params.size() < 1)
+    bool fEnable;
+    if (params.size() >= 1)
+        fEnable = params[0].get_bool();
+
+    if (fHelp || params.size() < 1 || (fEnable && params.size() != 2) || params.size() > 2)
         throw runtime_error(
-            "autocombinerewards <true/false> threshold\n"
-            "Wallet will automatically monitor for any coins with value below the threshold amount, and combine them if they reside with the same CONCIERGE address\n"
-            "When autocombinerewards runs it will create a transaction, and therefore will be subject to transaction fees.\n");
+            "autocombinerewards true|false ( threshold )\n"
+            "\nWallet will automatically monitor for any coins with value below the threshold amount, and combine them if they reside with the same Concierge address\n"
+            "When autocombinerewards runs it will create a transaction, and therefore will be subject to transaction fees.\n"
+
+            "\nArguments:\n"
+            "1. true|false      (boolean, required) Enable auto combine (true) or disable (false)\n"
+            "2. threshold       (numeric, optional) Threshold amount (default: 0)\n"
+            "\nExamples:\n" +
+            HelpExampleCli("autocombinerewards", "true 500") + HelpExampleRpc("autocombinerewards", "true 500"));
 
     CWalletDB walletdb(pwalletMain->strWalletFile);
-    bool fEnable = params[0].get_bool();
     CAmount nThreshold = 0;
 
-    if (fEnable) {
-        if (params.size() != 2)
-            throw runtime_error("Input Error: use format: autocombinerewards <true/false> threshold\n");
-
+    if (fEnable)
         nThreshold = params[1].get_int();
-    }
 
     pwalletMain->fCombineDust = fEnable;
     pwalletMain->nAutoCombineThreshold = nThreshold;
@@ -2027,7 +2060,7 @@ Value autocombinerewards(const Array& params, bool fHelp)
     if (!walletdb.WriteAutoCombineSettings(fEnable, nThreshold))
         throw runtime_error("Changed settings in wallet but failed to save to database\n");
 
-    return "Auto Combine Rewards Threshold Set";
+    return Value::null;
 }
 
 Array printMultiSend()
@@ -2214,7 +2247,7 @@ Value multisend(const Array& params, bool fHelp)
             "The MultiSend transaction is sent when the staked coins mature (100 confirmations)\n"
             "****************************************************************\n"
             "TO CREATE OR ADD TO THE MULTISEND VECTOR:\n"
-            "multisend <CONCIERGE Address> <percent>\n"
+            "multisend <Concierge Address> <percent>\n"
             "This will add a new address to the MultiSend vector\n"
             "Percent is a whole number 1 to 100.\n"
             "****************************************************************\n"

@@ -1,4 +1,3 @@
-
 #include "activemasternode.h"
 #include "addrman.h"
 #include "masternode.h"
@@ -8,7 +7,7 @@
 #include "spork.h"
 
 //
-// Bootup the Masternode, look for a 10000 CONCIERGE input and register on the network
+// Bootup the Masternode, look for a 10000 Concierge input and register on the network
 //
 void CActiveMasternode::ManageStatus()
 {
@@ -47,12 +46,18 @@ void CActiveMasternode::ManageStatus()
             return;
         }
 
+		if (pwalletMain->GetBalance() < Params().MasternodeCollateralAmt()*COIN) {
+			LogPrintf("CActiveMasternode::ManageStateInitial -- %s: Wallet balance is < 1,000 CCC\n", GetStateString());
+		}
+
+
+		/*
         if (pwalletMain->GetBalance() == 0) {
             notCapableReason = "Hot node, waiting for remote activation.";
             LogPrintf("CActiveMasternode::ManageStatus() - not capable: %s\n", notCapableReason);
             return;
         }
-
+		*/
         if (strMasterNodeAddr.empty()) {
             if (!GetLocal(service)) {
                 notCapableReason = "Can't detect external address. Please use the masternodeaddr configuration option.";
@@ -130,6 +135,18 @@ void CActiveMasternode::ManageStatus()
     //send to all peers
     if (!SendMasternodePing(errorMessage)) {
         LogPrintf("CActiveMasternode::ManageStatus() - Error on Ping: %s\n", errorMessage);
+    }
+}
+
+std::string CActiveMasternode::GetStateString() const
+{
+    switch (status) {
+        case ACTIVE_MASTERNODE_INITIAL:         return "INITIAL";
+        case ACTIVE_MASTERNODE_SYNC_IN_PROCESS: return "SYNC_IN_PROCESS";
+        case ACTIVE_MASTERNODE_INPUT_TOO_NEW:   return "INPUT_TOO_NEW";
+        case ACTIVE_MASTERNODE_NOT_CAPABLE:     return "NOT_CAPABLE";
+        case ACTIVE_MASTERNODE_STARTED:         return "STARTED";
+        default:                                return "UNKNOWN";
     }
 }
 
@@ -468,7 +485,7 @@ vector<COutput> CActiveMasternode::SelectCoinsMasternode()
 
     // Filter
     BOOST_FOREACH (const COutput& out, vCoins) {
-        if (out.tx->vout[out.i].nValue == 10000 * COIN) { //exactly
+        if (out.tx->vout[out.i].nValue == Params().MasternodeCollateralAmt() * COIN) { //exactly
             filteredCoins.push_back(out);
         }
     }

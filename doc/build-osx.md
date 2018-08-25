@@ -44,8 +44,8 @@ Instructions: Homebrew
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone https://github.com/CONCIERGE-Project/CONCIERGE.git
-        cd CONCIERGE
+        git clone https://github.com/Concierge-Project/Concierge.git
+        cd Concierge
 
 2.  Build concierged:
 
@@ -92,7 +92,7 @@ All dependencies should be compiled with these flags:
  -arch x86_64
  -isysroot $(xcode-select --print-path)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
 
-Once dependencies are compiled, see release-process.md for how the CONCIERGE-Qt.app
+Once dependencies are compiled, see release-process.md for how the Concierge-Qt.app
 bundle is packaged and signed to create the .dmg disk image that is distributed.
 
 Running
@@ -104,14 +104,14 @@ directory. We have to first create the RPC configuration file, though.
 Run `./concierged` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=conciergerpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/CONCIERGE/concierge.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/CONCIERGE/concierge.conf"
+    echo -e "rpcuser=conciergerpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Concierge/concierge.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/Concierge/concierge.conf"
 
 The next time you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours;
 you can monitor its process by looking at the debug.log file, like this:
 
-    tail -f $HOME/Library/Application\ Support/CONCIERGE/debug.log
+    tail -f $HOME/Library/Application\ Support/Concierge/debug.log
 
 Other commands:
 -------

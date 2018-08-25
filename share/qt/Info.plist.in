@@ -29,7 +29,7 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>CONCIERGE-Qt</string>
+  <string>Concierge-Qt</string>
 
   <key>CFBundleIdentifier</key>
   <string>io.concierge.Concierge-Qt</string>

@@ -1,9 +1,9 @@
 Gitian building
 ================
 
-*Setup instructions for a gitian build of CONCIERGE using a Debian VM or physical system.*
+*Setup instructions for a gitian build of Concierge using a Debian VM or physical system.*
 
-Gitian is the deterministic build process that is used to build the CONCIERGE
+Gitian is the deterministic build process that is used to build the Concierge
 Core executables. It provides a way to be reasonably sure that the
 executables are really built from source on GitHub. It also makes sure that
 the same, tested dependencies are used and statically built into the executable.
@@ -26,7 +26,7 @@ Table of Contents
 - [Installing gitian](#installing-gitian)
 - [Setting up gitian images](#setting-up-gitian-images)
 - [Getting and building the inputs](#getting-and-building-the-inputs)
-- [Building CONCIERGE](#building-concierge)
+- [Building Concierge](#building-concierge)
 - [Building an alternative repository](#building-an-alternative-repository)
 - [Signing externally](#signing-externally)
 - [Uploading signatures](#uploading-signatures)
@@ -326,10 +326,10 @@ under 'Fetch and build inputs' to install sources which require manual intervent
 the next step: 'Seed the Gitian sources cache', which will fetch all necessary source files allowing
 for gitian to work offline.
 
-Building CONCIERGE
+Building Concierge
 ----------------
 
-To build CONCIERGE (for Linux, OSX and Windows) just follow the steps under 'perform
+To build Concierge (for Linux, OSX and Windows) just follow the steps under 'perform
 gitian builds' in [doc/release-process.md](release-process.md) in the concierge repository.
 
 This may take a long time as it also builds the dependencies needed for each descriptor.
@@ -379,9 +379,9 @@ For example:
 ```bash
 URL=https://github.com/crowning-/concierge.git
 COMMIT=b616fb8ef0d49a919b72b0388b091aaec5849b96
-./bin/gbuild --commit concierge=${COMMIT} --url concierge=${URL} ../concierge/contrib/gitian-descriptors/gitian-linux.yml
-./bin/gbuild --commit concierge=${COMMIT} --url concierge=${URL} ../concierge/contrib/gitian-descriptors/gitian-win.yml
-./bin/gbuild --commit concierge=${COMMIT} --url concierge=${URL} ../concierge/contrib/gitian-descriptors/gitian-osx.yml
+./bin/gbuild --commit concierge=${COMMIT} --url concierge=${URL} ../Concierge/contrib/gitian-descriptors/gitian-linux.yml
+./bin/gbuild --commit concierge=${COMMIT} --url concierge=${URL} ../Concierge/contrib/gitian-descriptors/gitian-win.yml
+./bin/gbuild --commit concierge=${COMMIT} --url concierge=${URL} ../Concierge/contrib/gitian-descriptors/gitian-osx.yml
 ```
 
 Signing externally
