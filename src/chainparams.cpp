@@ -52,19 +52,18 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 //    timestamp before)
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
-    boost::assign::map_list_of
-(0,uint256("0x973e6529c057b012ad340a1e0fc9363ead3d8f2d8de96dbbb581604097376902"));
-
+boost::assign::map_list_of
+(0, uint256("0x973e6529c057b012ad340a1e0fc9363ead3d8f2d8de96dbbb581604097376902"));
 static const Checkpoints::CCheckpointData data = {
-    &mapCheckpoints,
-    1535132981, // * UNIX timestamp of last checkpoint block
-    0,    // * total number of transactions between genesis and last checkpoint
-                //   (the tx=... number in the SetBestChain debug.log lines)
-    2000        // * estimated number of transactions per day after checkpoint
+	&mapCheckpoints,
+	1535132981, // * UNIX timestamp of last checkpoint block
+	1,    // * total number of transactions between genesis and last checkpoint
+		  //   (the tx=... number in the SetBestChain debug.log lines)
+		  100        // * estimated number of transactions per day after checkpoint
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
-    boost::assign::map_list_of(0, uint256("0x001"));
+    boost::assign::map_list_of(0, uint256("0x973e6529c057b012ad340a1e0fc9363ead3d8f2d8de96dbbb581604097376902"));
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
     1535132981,
@@ -72,7 +71,7 @@ static const Checkpoints::CCheckpointData dataTestnet = {
     250};
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
-    boost::assign::map_list_of(0, uint256("0x001"));
+    boost::assign::map_list_of(0, uint256("0x973e6529c057b012ad340a1e0fc9363ead3d8f2d8de96dbbb581604097376902"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
     1535132981,
@@ -97,7 +96,7 @@ public:
         pchMessageStart[3] = 0xe9;
         vAlertPubKey = ParseHex("04b48efb7d7217b1abc88e84574c7137e6dff7a8cb9bee070922daca0a9624a684cdc4f1c91383417ffa2c22c0b21313d15dfa2ec718609a64276aef3c0afdebb6");
         nDefaultPort = 51470;
-        bnProofOfWorkLimit = ~uint256(0) >> 20; // CONCIERGE starting difficulty is 1 / 2^12
+        bnProofOfWorkLimit = ~uint256(0) >> 1; // CONCIERGE starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
         nEnforceBlockUpgradeMajority = 750;
